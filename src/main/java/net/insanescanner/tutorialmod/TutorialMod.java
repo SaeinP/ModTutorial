@@ -65,9 +65,12 @@ public class TutorialMod
             event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_ALEXANDRITE);
             event.accept(ModItems.RAW_SAPPHIRE);
+            event.accept(ModItems.SAPPHIRE);
+            event.accept(ModItems.CUT_SAPPHIRE);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK);
+            event.accept(ModBlocks.POLISHED_SAPPHIRE_BLOCK);
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
         }

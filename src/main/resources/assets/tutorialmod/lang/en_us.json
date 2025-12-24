@@ -2,8 +2,11 @@
   "item.tutorialmod.alexandrite": "Alexandrite Gem",
   "item.tutorialmod.raw_alexandrite": "Raw Alexandrite",
   "item.tutorialmod.raw_sapphire": "Raw Sapphire",
+  "item.tutorialmod.sapphire": "Sapphire",
+  "item.tutorialmod.cut_sapphire": "Cut Sapphire",
 
   "block.tutorialmod.unpolished_sapphire_block": "Block of Unpolished Sapphire",
+  "block.tutorialmod.polished_sapphire_block": "Block of Polished Sapphire",
   "block.tutorialmod.alexandrite_block": "Block of Alexandrite",
   "block.tutorialmod.raw_alexandrite_block": "Block of Raw Alexandrite",
 

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 1.0,
+  "group": "gems",
+  "ingredient": {
+    "item": "tutorialmod:raw_alexandrite"
+  },
+  "result": {
+    "id": "tutorialmod:alexandrite"
+  }
+}
