@@ -23,12 +23,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlocks.ALEXANDRITE_ORE.get());
+                        output.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
                         output.accept(ModItems.RAW_SAPPHIRE.get());
                         output.accept(ModItems.SAPPHIRE.get());
                         output.accept(ModItems.CUT_SAPPHIRE.get());
                         output.accept(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get());
                         output.accept(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get());
-
+                        output.accept(ModBlocks.ALEXANDRITE_ORE.get());
+                        output.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
                     }).build());
 
 
@@ -40,9 +43,23 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output)-> {
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                        output.accept(ModBlocks.ALEXANDRITE_ORE.get());
+                        output.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get());
                         output.accept(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get());
+                        output.accept(ModBlocks.SAPPHIRE_ORE.get());
+                        output.accept(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());
                     }).build());
+
+
+    public static final RegistryObject<CreativeModeTab> TUTORIAL_ACTIONABLE_TAB =
+            CREATIVE_MODE_TABS.register("tutorial_actionables_tab",
+                    () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MAGIC_CHISEL.get()))
+                            .withTabsBefore(TUTORIAL_BLOCKS_TAB.getId())
+                            .title(Component.translatable("creativetab.tutorialmod.tutorial_mod_actionables"))
+                            .displayItems((itemDisplayParameters, output)-> {
+                                output.accept(ModItems.MAGIC_CHISEL.get());
+                            }).build());
 
     public static void register(IEventBus eventBus){
         CREATIVE_MODE_TABS.register(eventBus);

@@ -73,6 +73,12 @@ public class TutorialMod
             event.accept(ModBlocks.POLISHED_SAPPHIRE_BLOCK);
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
+            event.accept(ModBlocks.ALEXANDRITE_ORE.get());
+            event.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.MAGIC_CHISEL.get());
         }
 
     }

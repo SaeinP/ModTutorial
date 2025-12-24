@@ -1,6 +1,7 @@
 package net.insanescanner.tutorialmod.item;
 
 import net.insanescanner.tutorialmod.TutorialMod;
+import net.insanescanner.tutorialmod.item.custom.MagicChiselItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,6 +26,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> CUT_SAPPHIRE = ITEMS.register("cut_sapphire",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> MAGIC_CHISEL = ITEMS.register("magic_chisel",
+            () -> new MagicChiselItem(new Item.Properties().durability(32)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

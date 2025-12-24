@@ -5,12 +5,20 @@
   "item.tutorialmod.sapphire": "Sapphire",
   "item.tutorialmod.cut_sapphire": "Cut Sapphire",
 
+  "item.tutorialmod.magic_chisel": "Magic Chisel",
+
   "block.tutorialmod.unpolished_sapphire_block": "Block of Unpolished Sapphire",
   "block.tutorialmod.polished_sapphire_block": "Block of Polished Sapphire",
   "block.tutorialmod.alexandrite_block": "Block of Alexandrite",
   "block.tutorialmod.raw_alexandrite_block": "Block of Raw Alexandrite",
 
+  "block.tutorialmod.alexandrite_ore": "Alexandrite Ore",
+  "block.tutorialmod.alexandrite_deepslate_ore": "Alexandrite Deepslate Ore",
+  "block.tutorialmod.sapphire_ore": "Sapphire Ore",
+  "block.tutorialmod.sapphire_deepslate_ore": "Sapphire Deepslate Ore",
+
   "creativetab.tutorialmod.tutorial_mod_items" : "Tutorial Mod Items",
-  "creativetab.tutorialmod.tutorial_mod_blocks": "Tutorial Mod Blocks"
+  "creativetab.tutorialmod.tutorial_mod_blocks": "Tutorial Mod Blocks",
+  "creativetab.tutorialmod.tutorial_mod_actionables": "Tutorial Mod Custom Items"
 
 }

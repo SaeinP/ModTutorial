@@ -3,9 +3,11 @@ package net.insanescanner.tutorialmod.block;
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.minecraft.client.resources.model.Material;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.levelgen.material.MaterialRuleList;
@@ -23,21 +25,35 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Block> UNPOLISHED_SAPPHIRE_BLOCK = registerBlock("unpolished_sapphire_block",
-            () -> new Block(BlockBehaviour.Properties.of().strength(4f).
+            () -> new Block(BlockBehaviour.Properties.of().strength(3f).
                     requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
     public static final RegistryObject<Block> POLISHED_SAPPHIRE_BLOCK = registerBlock("polished_sapphire_block",
-            () -> new Block(BlockBehaviour.Properties.of().strength(4f).
+            () -> new Block(BlockBehaviour.Properties.of().strength(3f).
                     requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
-    public static final RegistryObject<Block>ALEXANDRITE_BLOCK = registerBlock("alexandrite_block",
+    public static final RegistryObject<Block> ALEXANDRITE_BLOCK = registerBlock("alexandrite_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
     public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock("raw_alexandrite_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).
                     requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
+    public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock("alexandrite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of().strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final RegistryObject<Block> ALEXANDRITE_DEEPSLATE_ORE = registerBlock("alexandrite_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3,5),BlockBehaviour.Properties.of().strength(5f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3,5),BlockBehaviour.Properties.of().strength(3f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> SAPPHIRE_DEEPSLATE_ORE = registerBlock("sapphire_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(4,6),BlockBehaviour.Properties.of().strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
