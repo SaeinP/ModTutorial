@@ -62,11 +62,15 @@ public class TutorialMod
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_ALEXANDRITE);
+            event.accept(ModItems.ALEXANDRITE);
             event.accept(ModItems.RAW_SAPPHIRE);
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.CUT_SAPPHIRE);
+            event.accept(ModItems.CUT_EMERALD);
+            event.accept(ModItems.SAPPHIRE_APPLE);
+            event.accept(ModItems.ENCHANTED_SAPPHIRE_APPLE);
+            event.accept(ModItems.WRATH_REMNANT);
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK);
@@ -75,10 +79,14 @@ public class TutorialMod
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.ALEXANDRITE_ORE.get());
             event.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+            event.accept(ModBlocks.MAGIC_BLOCK.get());
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.MAGIC_CHISEL.get());
+            event.accept(ModItems.OPAL_RING.get());
+            event.accept(ModItems.SAPPHIRE_RING.get());
+            event.accept(ModItems.EMERALD_RING.get());
         }
 
     }

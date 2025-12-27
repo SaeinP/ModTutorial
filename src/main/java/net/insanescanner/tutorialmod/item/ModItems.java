@@ -1,14 +1,22 @@
 package net.insanescanner.tutorialmod.item;
 
 import net.insanescanner.tutorialmod.TutorialMod;
-import net.insanescanner.tutorialmod.item.custom.MagicChiselItem;
+import net.insanescanner.tutorialmod.item.custom.*;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.UUID;
+
 public class ModItems {
+
+    private static final UUID ALEXANDRITE_RING_HEALTH_UUID =
+            UUID.fromString("d3b1c5a7-8c90-4c73-bb9e-3d1d3c2f8c11");
+
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
@@ -27,8 +35,33 @@ public class ModItems {
     public static final RegistryObject<Item> CUT_SAPPHIRE = ITEMS.register("cut_sapphire",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> CUT_EMERALD = ITEMS.register("cut_emerald",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> MAGIC_CHISEL = ITEMS.register("magic_chisel",
-            () -> new MagicChiselItem(new Item.Properties().durability(32)));
+            () -> new MagicChiselItem(new Item.Properties().durability(32).stacksTo(1)));
+
+    public static final RegistryObject<Item> OPAL_RING = ITEMS.register("opal_ring",
+            () -> new OpalRingItem(new Item.Properties().stacksTo(1)
+                    .attributes(OpalRingItem.createAttributes())));
+
+    public static final RegistryObject<Item> SAPPHIRE_RING = ITEMS.register("sapphire_ring",
+            () -> new SapphireRingItem(new Item.Properties().stacksTo(1)
+                    .attributes(SapphireRingItem.createAttributes())));
+
+    public static final RegistryObject<Item> EMERALD_RING = ITEMS.register("emerald_ring",
+            () -> new EmeraldRingItem(new Item.Properties().stacksTo(1)
+                    .attributes(EmeraldRingItem.createAttributes())));
+
+    public static final RegistryObject<Item> SAPPHIRE_APPLE =
+            ITEMS.register("sapphire_apple", () -> new Item(new Item.Properties().food(ModFoodProperties.SAPPHIRE_APPLE)));
+
+    public static final RegistryObject<Item> ENCHANTED_SAPPHIRE_APPLE =
+            ITEMS.register("enchanted_sapphire_apple", () -> new Item(new Item.Properties().food(ModFoodProperties.ENCHANTED_SAPPHIRE_APPLE)
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(Rarity.EPIC)));
+
+    public static final RegistryObject<Item> WRATH_REMNANT = ITEMS.register("wrath_remnant", () -> new WrathRemnantItem(new Item.Properties(), 1500));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

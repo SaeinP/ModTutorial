@@ -20,18 +20,18 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.tutorialmod.tutorial_mod_items"))
                     .displayItems((itemDisplayParameters, output)-> {
                         output.accept(ModItems.ALEXANDRITE.get());
-                        output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
-                        output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
-                        output.accept(ModBlocks.ALEXANDRITE_ORE.get());
-                        output.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
                         output.accept(ModItems.RAW_SAPPHIRE.get());
                         output.accept(ModItems.SAPPHIRE.get());
                         output.accept(ModItems.CUT_SAPPHIRE.get());
-                        output.accept(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get());
-                        output.accept(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get());
-                        output.accept(ModBlocks.ALEXANDRITE_ORE.get());
-                        output.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+                        output.accept(ModItems.SAPPHIRE_APPLE.get());
+                        output.accept(ModItems.ENCHANTED_SAPPHIRE_APPLE.get());
+                        output.accept(ModItems.MAGIC_CHISEL.get());
+                        output.accept(ModBlocks.MAGIC_BLOCK.get());
+                        output.accept(ModItems.OPAL_RING.get());
+                        output.accept(ModItems.SAPPHIRE_RING.get());
+                        output.accept(ModItems.CUT_EMERALD.get());
+                        output.accept(ModItems.WRATH_REMNANT.get());
                     }).build());
 
 
@@ -49,6 +49,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get());
                         output.accept(ModBlocks.SAPPHIRE_ORE.get());
                         output.accept(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.MAGIC_BLOCK.get());
                     }).build());
 
 
@@ -59,6 +60,9 @@ public class ModCreativeModeTabs {
                             .title(Component.translatable("creativetab.tutorialmod.tutorial_mod_actionables"))
                             .displayItems((itemDisplayParameters, output)-> {
                                 output.accept(ModItems.MAGIC_CHISEL.get());
+                                output.accept(ModItems.OPAL_RING.get());
+                                output.accept(ModItems.SAPPHIRE_RING.get());
+                                output.accept(ModItems.EMERALD_RING.get());
                             }).build());
 
     public static void register(IEventBus eventBus){

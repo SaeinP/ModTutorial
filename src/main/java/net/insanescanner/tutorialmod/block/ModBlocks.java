@@ -1,6 +1,7 @@
 package net.insanescanner.tutorialmod.block;
 
 import net.insanescanner.tutorialmod.TutorialMod;
+import net.insanescanner.tutorialmod.block.custom.MagicBlock;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -55,6 +56,9 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(4,6),BlockBehaviour.Properties.of().strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

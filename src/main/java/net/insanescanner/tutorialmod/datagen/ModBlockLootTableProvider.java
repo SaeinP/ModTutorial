@@ -1,0 +1,122 @@
+package net.insanescanner.tutorialmod.datagen;
+
+import net.insanescanner.tutorialmod.block.ModBlocks;
+import net.insanescanner.tutorialmod.item.ModItems;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.flag.FeatureFlagSet;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.AlternativesEntry;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraftforge.registries.RegistryObject;
+
+import java.util.*;
+
+public class ModBlockLootTableProvider extends BlockLootSubProvider {
+
+
+    protected ModBlockLootTableProvider(HolderLookup.Provider pRegistries) {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), pRegistries);
+    }
+
+    @Override
+    protected void generate() {
+        dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
+        dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+        dropSelf(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get());
+        dropSelf(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get());
+        dropSelf(ModBlocks.MAGIC_BLOCK.get());
+
+        this.add(ModBlocks.MAGIC_BLOCK.get(),
+                block -> createMagicBlockDrops(ModBlocks.MAGIC_BLOCK.get(), 1.00F, 1.00F, 1.00F, 1.00F, 1.00F));
+
+        this.add(ModBlocks.ALEXANDRITE_ORE.get(),
+        block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 1));
+
+        this.add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 2));
+
+
+        this.add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get(), ModItems.SAPPHIRE.get(), 1, 2));
+
+        this.add(ModBlocks.SAPPHIRE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get(), 1, 1));
+    }
+
+    @Override
+    protected Iterable<Block> getKnownBlocks() {
+        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+    }
+
+    protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrop, float maxDrop) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createSilkTouchDispatchTable(
+                pBlock,
+                (LootPoolEntryContainer.Builder<?>)this.applyExplosionDecay(
+                        pBlock,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrop, maxDrop)))
+                                .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
+                )
+        );
+    }
+
+    protected LootTable.Builder createMagicBlockDrops(Block pMagicBlock, float... pChances) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createMagicDrops(pMagicBlock, pChances)
+                .withPool(
+                        LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1.0F))
+                                .when(this.doesNotHaveSilkTouch())
+                                .add(
+                                        ((LootPoolSingletonContainer.Builder)this.applyExplosionCondition(pMagicBlock, LootItem.lootTableItem(Items.DIAMOND).apply(SetItemCountFunction.setCount(UniformGenerator.between(0f, 2f)))))
+                                                .when(
+                                                        BonusLevelTableCondition.bonusLevelFlatChance(
+                                                                registrylookup.getOrThrow(Enchantments.FORTUNE), pChances
+                                                        )
+                                                )
+                                )
+                );
+    }
+
+    protected LootTable.Builder createMagicDrops(Block pMagicBlock, float... pChances) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createSilkTouchDispatchTable(
+                        pMagicBlock,
+                        ((LootPoolSingletonContainer.Builder)this.applyExplosionCondition(pMagicBlock, LootItem.lootTableItem(Items.GOLD_INGOT).apply(SetItemCountFunction.setCount(UniformGenerator.between(0f, 2f)))))
+                                .when(BonusLevelTableCondition.bonusLevelFlatChance(registrylookup.getOrThrow(Enchantments.FORTUNE), pChances))
+                )
+                .withPool(
+                        LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1.0F))
+                                .when(this.doesNotHaveSilkTouch())
+                                .add(
+                                        ((LootPoolSingletonContainer.Builder)this.applyExplosionDecay(
+                                                pMagicBlock, LootItem.lootTableItem(Items.EMERALD).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 7.0F)))
+                                        ))
+                                                .when(BonusLevelTableCondition.bonusLevelFlatChance(registrylookup.getOrThrow(Enchantments.FORTUNE), new float[]{0.7F, 0.722222223F, 0.725F, 0.73333335F, 0.9F}))
+                                )
+                );
+    }
+
+
+
+}
