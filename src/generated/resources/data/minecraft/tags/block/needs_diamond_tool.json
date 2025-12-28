@@ -3,6 +3,15 @@
     "tutorialmod:alexandrite_block",
     "tutorialmod:raw_alexandrite_block",
     "tutorialmod:alexandrite_ore",
-    "tutorialmod:alexandrite_deepslate_ore"
+    "tutorialmod:alexandrite_deepslate_ore",
+    "tutorialmod:alexandrite_fence",
+    "tutorialmod:alexandrite_fence_gate",
+    "tutorialmod:alexandrite_pressure_plate",
+    "tutorialmod:alexandrite_button",
+    "tutorialmod:alexandrite_slab",
+    "tutorialmod:alexandrite_stair",
+    "tutorialmod:alexandrite_wall",
+    "tutorialmod:alexandrite_door",
+    "tutorialmod:alexandrite_trapdoor"
   ]
 }

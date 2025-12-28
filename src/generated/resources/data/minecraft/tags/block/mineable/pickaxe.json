@@ -8,6 +8,20 @@
     "tutorialmod:polished_sapphire_block",
     "tutorialmod:magic_block",
     "tutorialmod:sapphire_ore",
-    "tutorialmod:sapphire_deepslate_ore"
+    "tutorialmod:sapphire_deepslate_ore",
+    "tutorialmod:unpolished_sapphire_stair",
+    "tutorialmod:polished_sapphire_stair",
+    "tutorialmod:unpolished_sapphire_stair",
+    "tutorialmod:polished_sapphire_slab",
+    "tutorialmod:unpolished_sapphire_slab",
+    "tutorialmod:alexandrite_stair",
+    "tutorialmod:alexandrite_fence",
+    "tutorialmod:alexandrite_fence_gate",
+    "tutorialmod:alexandrite_pressure_plate",
+    "tutorialmod:alexandrite_button",
+    "tutorialmod:alexandrite_slab",
+    "tutorialmod:alexandrite_wall",
+    "tutorialmod:alexandrite_door",
+    "tutorialmod:alexandrite_trapdoor"
   ]
 }

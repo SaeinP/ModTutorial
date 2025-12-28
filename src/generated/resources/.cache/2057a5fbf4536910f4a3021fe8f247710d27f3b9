@@ -1,5 +1,9 @@
-// 1.21	2025-12-27T04:10:18.5132164	Item Models: tutorialmod
+// 1.21	2025-12-28T00:05:36.8819796	Item Models: tutorialmod
 9c36309b9b22da0f2a38fda68096fcc3013c449b assets/tutorialmod/models/item/alexandrite.json
+9a4cf3b4fc3a6a6372ea70a3a5572d2c6c3ca1aa assets/tutorialmod/models/item/alexandrite_button.json
+4eba9df595e1c7ced9cd8c0f8f698096a01ce673 assets/tutorialmod/models/item/alexandrite_door.json
+11dfa7af9b5aa4f86ae1094d2cb8d78a81abef0e assets/tutorialmod/models/item/alexandrite_fence.json
+b9a62ed3fc1c7a5a754d17fb335771f6cfa7112d assets/tutorialmod/models/item/alexandrite_wall.json
 a6cbf7d9a9f6bba6247146c14978a902ef1546e3 assets/tutorialmod/models/item/cut_emerald.json
 fa892c267c5f209b0b189c4e54a37055944d8757 assets/tutorialmod/models/item/cut_sapphire.json
 e7ef11889e80da4ec66c036161cd0fe4a31eedb2 assets/tutorialmod/models/item/emerald_ring.json

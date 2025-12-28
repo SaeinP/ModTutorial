@@ -110,6 +110,14 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('B', ModItems.ALEXANDRITE.get())
                 .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_LAMP.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern("AAA")
+                .define('A', ModItems.ALEXANDRITE.get())
+                .define('B', Items.REDSTONE)
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CUT_EMERALD.get(), 1)
                 .requires(Items.EMERALD)
                 .requires(ModTags.Items.SWORDS_ABOVE_STONE)
@@ -146,6 +154,28 @@ public class ModRecipeProvider extends RecipeProvider {
         oreBlasting(pRecipeOutput, SAPPHIRE_SMELTABLE, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.5f, 100, "sapphire");
 
 
+        stairBuilder(ModBlocks.ALEXANDRITE_STAIR.get(), Ingredient.of(ModItems.ALEXANDRITE.get())).group("alexandrite").unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALEXANDRITE_SLAB.get(), ModItems.ALEXANDRITE.get());
+        buttonBuilder(ModBlocks.ALEXANDRITE_BUTTON.get(), Ingredient.of(ModItems.ALEXANDRITE.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+        pressurePlate(pRecipeOutput, ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get(), ModItems.ALEXANDRITE.get());
+
+        fenceBuilder(ModBlocks.ALEXANDRITE_FENCE.get(), Ingredient.of(ModItems.ALEXANDRITE.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+        fenceGateBuilder(ModBlocks.ALEXANDRITE_FENCE_GATE.get(), Ingredient.of(ModItems.ALEXANDRITE.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+        wall(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ALEXANDRITE_WALL.get(), ModItems.ALEXANDRITE.get());
+
+        doorBuilder(ModBlocks.ALEXANDRITE_DOOR.get(), Ingredient.of(ModItems.ALEXANDRITE.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+        trapdoorBuilder(ModBlocks.ALEXANDRITE_TRAPDOOR.get(), Ingredient.of(ModItems.ALEXANDRITE.get())).group("alexandrite")
+                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+
+
+        stairBuilder(ModBlocks.UNPOLISHED_SAPPHIRE_STAIR.get(), Ingredient.of(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get())).group("sapphire").unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.UNPOLISHED_SAPPHIRE_SLAB.get(), ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get());
+        stairBuilder(ModBlocks.POLISHED_SAPPHIRE_STAIR.get(), Ingredient.of(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get())).group("sapphire").unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get())).save(pRecipeOutput);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_SAPPHIRE_SLAB.get(), ModBlocks.POLISHED_SAPPHIRE_BLOCK.get());
 
     }
 

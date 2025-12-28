@@ -21,6 +21,11 @@
   "block.tutorialmod.alexandrite_block": "Block of Alexandrite",
   "block.tutorialmod.raw_alexandrite_block": "Block of Raw Alexandrite",
 
+  "block.tutorialmod.unpolished_sapphire_slab": "Unpolished Sapphire Slab",
+  "block.tutorialmod.unpolished_sapphire_stair": "Unpolished Sapphire Stair",
+  "block.tutorialmod.polished_sapphire_slab": "polished Sapphire Slab",
+  "block.tutorialmod.polished_sapphire_stair": "polished Sapphire Stair",
+
   "block.tutorialmod.magic_block": "Magic Block",
 
   "block.tutorialmod.alexandrite_ore": "Alexandrite Ore",
@@ -28,9 +33,25 @@
   "block.tutorialmod.sapphire_ore": "Sapphire Ore",
   "block.tutorialmod.sapphire_deepslate_ore": "Sapphire Deepslate Ore",
 
+  "block.tutorialmod.alexandrite_stairs": "Alexandrite Stairs",
+  "block.tutorialmod.alexandrite_slab": "Alexandrite Slab",
+
+  "block.tutorialmod.alexandrite_button": "Alexandrite Button",
+  "block.tutorialmod.alexandrite_pressure_plate": "Alexandrite Pressure Plate",
+
+  "block.tutorialmod.alexandrite_fence": "Alexandrite Fence",
+  "block.tutorialmod.alexandrite_fence_gate": "Alexandrite Fence Gate",
+  "block.tutorialmod.alexandrite_wall": "Alexandrite Wall",
+
+  "block.tutorialmod.alexandrite_door": "Alexandrite Door",
+  "block.tutorialmod.alexandrite_trapdoor": "Alexandrite Trapdoor",
+
   "creativetab.tutorialmod.tutorial_mod_items" : "Tutorial Mod Items",
   "creativetab.tutorialmod.tutorial_mod_blocks": "Tutorial Mod Blocks",
   "creativetab.tutorialmod.tutorial_mod_actionables": "Tutorial Mod Custom Items",
+
+  "block.tutorialmod.alexandrite_lamp": "Alexandrite Lamp",
+
 
   "tooltip.tutorialmod.cursedfuelitem.tooltip":"THIS ITEM CARRIES AN §kANGUISHED SOUL§r. IT WILL AFFECT YOU WHILE CARRIED, YET BURNS BRIGHTLY AS §9FUEL§r.",
   "tooltip.tutorialmod.sapphire_ring.shifted": "CONTAINS THE POWER OF WATER, WHEN IN OFFHAND GIVES USER BOONS OF WATER.",

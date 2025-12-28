@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_sapphire_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tutorialmod:polished_sapphire_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tutorialmod:polished_sapphire_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_sapphire_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tutorialmod:polished_sapphire_slab"
+    ]
+  }
+}

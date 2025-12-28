@@ -28,20 +28,52 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get())
                 .add(ModBlocks.MAGIC_BLOCK.get())
                 .add(ModBlocks.SAPPHIRE_ORE.get())
-                .add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.UNPOLISHED_SAPPHIRE_STAIR.get())
+                .add(ModBlocks.POLISHED_SAPPHIRE_STAIR.get())
+                .add(ModBlocks.UNPOLISHED_SAPPHIRE_STAIR.get())
+                .add(ModBlocks.POLISHED_SAPPHIRE_SLAB.get())
+                .add(ModBlocks.UNPOLISHED_SAPPHIRE_SLAB.get())
+                .add(ModBlocks.ALEXANDRITE_STAIR.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get())
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
+                .add(ModBlocks.ALEXANDRITE_BUTTON.get())
+                .add(ModBlocks.ALEXANDRITE_SLAB.get())
+                .add(ModBlocks.ALEXANDRITE_WALL.get())
+                .add(ModBlocks.ALEXANDRITE_DOOR.get())
+                .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
-                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get())
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
+                .add(ModBlocks.ALEXANDRITE_BUTTON.get())
+                .add(ModBlocks.ALEXANDRITE_SLAB.get())
+                .add(ModBlocks.ALEXANDRITE_STAIR.get())
+                .add(ModBlocks.ALEXANDRITE_WALL.get())
+                .add(ModBlocks.ALEXANDRITE_DOOR.get())
+                .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL).add(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get())
                 .add(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get())
                 .add(ModBlocks.SAPPHIRE_ORE.get())
-                .add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.UNPOLISHED_SAPPHIRE_STAIR.get())
+                .add(ModBlocks.POLISHED_SAPPHIRE_STAIR.get())
+                .add(ModBlocks.UNPOLISHED_SAPPHIRE_SLAB.get())
+                .add(ModBlocks.POLISHED_SAPPHIRE_SLAB.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.MAGIC_BLOCK.get());
 
 
+        tag(BlockTags.FENCES).add(ModBlocks.ALEXANDRITE_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES).add(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+
+        tag(BlockTags.WALLS).add(ModBlocks.ALEXANDRITE_WALL.get());
     }
 }

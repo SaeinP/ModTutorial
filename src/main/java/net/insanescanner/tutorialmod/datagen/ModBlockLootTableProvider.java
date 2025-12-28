@@ -1,6 +1,7 @@
 package net.insanescanner.tutorialmod.datagen;
 
 import net.insanescanner.tutorialmod.block.ModBlocks;
+import net.insanescanner.tutorialmod.block.custom.AlexandriteLampBlock;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -44,6 +45,26 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get());
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
 
+        dropSelf(ModBlocks.ALEXANDRITE_BUTTON.get());
+        dropSelf(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+        //dropSelf(ModBlocks.ALEXANDRITE_DOOR.get());
+        dropSelf(ModBlocks.ALEXANDRITE_SLAB.get());
+        dropSelf(ModBlocks.ALEXANDRITE_STAIR.get());
+        dropSelf(ModBlocks.ALEXANDRITE_WALL.get());
+        dropSelf(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+        dropSelf(ModBlocks.ALEXANDRITE_FENCE.get());
+
+        dropSelf(ModBlocks.UNPOLISHED_SAPPHIRE_STAIR.get());
+        dropSelf(ModBlocks.POLISHED_SAPPHIRE_STAIR.get());
+        dropSelf(ModBlocks.UNPOLISHED_SAPPHIRE_SLAB.get());
+        dropSelf(ModBlocks.POLISHED_SAPPHIRE_SLAB.get());
+
+        dropSelf(ModBlocks.ALEXANDRITE_LAMP.get());
+
+        this.add(ModBlocks.ALEXANDRITE_DOOR.get(),
+                block -> createDoorTable(ModBlocks.ALEXANDRITE_DOOR.get()));
+
         this.add(ModBlocks.MAGIC_BLOCK.get(),
                 block -> createMagicBlockDrops(ModBlocks.MAGIC_BLOCK.get(), 1.00F, 1.00F, 1.00F, 1.00F, 1.00F));
 
@@ -60,6 +81,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.SAPPHIRE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get(), 1, 1));
     }
+
+
 
     @Override
     protected Iterable<Block> getKnownBlocks() {

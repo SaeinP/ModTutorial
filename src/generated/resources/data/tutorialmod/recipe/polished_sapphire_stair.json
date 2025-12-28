@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "sapphire",
+  "key": {
+    "#": {
+      "item": "tutorialmod:polished_sapphire_block"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "tutorialmod:polished_sapphire_stair"
+  }
+}

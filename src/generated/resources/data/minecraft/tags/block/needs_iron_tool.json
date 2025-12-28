@@ -3,6 +3,10 @@
     "tutorialmod:unpolished_sapphire_block",
     "tutorialmod:polished_sapphire_block",
     "tutorialmod:sapphire_ore",
-    "tutorialmod:sapphire_deepslate_ore"
+    "tutorialmod:sapphire_deepslate_ore",
+    "tutorialmod:unpolished_sapphire_stair",
+    "tutorialmod:polished_sapphire_stair",
+    "tutorialmod:unpolished_sapphire_slab",
+    "tutorialmod:polished_sapphire_slab"
   ]
 }

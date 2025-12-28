@@ -2,6 +2,7 @@ package net.insanescanner.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.insanescanner.tutorialmod.block.ModBlocks;
+import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
 import net.insanescanner.tutorialmod.item.ModCreativeModeTabs;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -45,7 +46,7 @@ public class TutorialMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-
+        ModDataComponentTypes.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -79,6 +80,7 @@ public class TutorialMod
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.ALEXANDRITE_ORE.get());
             event.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+            event.accept(ModBlocks.ALEXANDRITE_LAMP);
             event.accept(ModBlocks.MAGIC_BLOCK.get());
         }
 

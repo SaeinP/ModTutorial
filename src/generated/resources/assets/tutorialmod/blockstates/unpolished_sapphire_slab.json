@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tutorialmod:block/unpolished_sapphire_slab"
+    },
+    "type=double": {
+      "model": "tutorialmod:block/unpolished_sapphire_block"
+    },
+    "type=top": {
+      "model": "tutorialmod:block/unpolished_sapphire_slab_top"
+    }
+  }
+}

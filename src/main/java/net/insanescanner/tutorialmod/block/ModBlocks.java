@@ -1,16 +1,17 @@
 package net.insanescanner.tutorialmod.block;
 
 import net.insanescanner.tutorialmod.TutorialMod;
+import net.insanescanner.tutorialmod.block.custom.AlexandriteLampBlock;
 import net.insanescanner.tutorialmod.block.custom.MagicBlock;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.levelgen.material.MaterialRuleList;
 import net.minecraftforge.client.model.obj.ObjMaterialLibrary;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -59,6 +60,77 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<StairBlock> UNPOLISHED_SAPPHIRE_STAIR = registerBlock("unpolished_sapphire_stair",
+            () -> new StairBlock(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()
+                    ));
+
+    public static final RegistryObject<StairBlock> POLISHED_SAPPHIRE_STAIR = registerBlock("polished_sapphire_stair",
+            () -> new StairBlock(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()
+            ));
+
+    public static final RegistryObject<SlabBlock> UNPOLISHED_SAPPHIRE_SLAB = registerBlock("unpolished_sapphire_slab",
+            () -> new SlabBlock(
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()
+            ));
+
+    public static final RegistryObject<SlabBlock> POLISHED_SAPPHIRE_SLAB = registerBlock("polished_sapphire_slab",
+            () -> new SlabBlock(
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()
+            ));
+
+    public static final RegistryObject<StairBlock> ALEXANDRITE_STAIR = registerBlock("alexandrite_stair",
+            () -> new StairBlock(ModBlocks.ALEXANDRITE_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()
+            ));
+
+    public static final RegistryObject<SlabBlock> ALEXANDRITE_SLAB = registerBlock("alexandrite_slab",
+            () -> new SlabBlock(
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()
+            ));
+
+    public static final RegistryObject<PressurePlateBlock> ALEXANDRITE_PRESSURE_PLATE = registerBlock("alexandrite_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.IRON,
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()
+            ));
+
+    public static final RegistryObject<ButtonBlock> ALEXANDRITE_BUTTON = registerBlock("alexandrite_button",
+            () -> new ButtonBlock(BlockSetType.IRON, 35,
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noCollission()
+            ));
+
+    public static final RegistryObject<FenceBlock> ALEXANDRITE_FENCE = registerBlock("alexandrite_fence",
+            () -> new FenceBlock(
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()
+            ));
+
+    public static final RegistryObject<FenceGateBlock> ALEXANDRITE_FENCE_GATE = registerBlock("alexandrite_fence_gate",
+            () -> new FenceGateBlock(WoodType.ACACIA,
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()
+            ));
+
+    public static final RegistryObject<WallBlock> ALEXANDRITE_WALL = registerBlock("alexandrite_wall",
+            () -> new WallBlock(
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()
+            ));
+
+    public static final RegistryObject<DoorBlock> ALEXANDRITE_DOOR = registerBlock("alexandrite_door",
+            () -> new DoorBlock(BlockSetType.IRON,
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()
+            ));
+
+    public static final RegistryObject<TrapDoorBlock> ALEXANDRITE_TRAPDOOR = registerBlock("alexandrite_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.IRON,
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().noOcclusion()
+            ));
+
+    public static final RegistryObject<Block> ALEXANDRITE_LAMP = registerBlock("alexandrite_lamp",
+            () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of().strength(3f).lightLevel(state -> state.getValue(AlexandriteLampBlock.CLICKED) ? 15 : 0))
+    );
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
