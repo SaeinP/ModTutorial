@@ -27,6 +27,9 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.RAW_ALEXANDRITE_BLOCK);
 
+        blockWithItem(ModBlocks.MEMOITE_DEEPSLATE_ORE);
+        blockWithItem(ModBlocks.MEMOITE_ORE);
+
         blockWithItem(ModBlocks.SAPPHIRE_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.SAPPHIRE_ORE);
         blockWithItem(ModBlocks.POLISHED_SAPPHIRE_BLOCK);

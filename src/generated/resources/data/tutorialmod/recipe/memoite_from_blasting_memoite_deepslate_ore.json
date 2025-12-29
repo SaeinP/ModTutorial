@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "group": "memoite",
+  "ingredient": {
+    "item": "tutorialmod:memoite_deepslate_ore"
+  },
+  "result": {
+    "id": "tutorialmod:memoite"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "values": [
+    "tutorialmod:memoite_ore",
+    "tutorialmod:memoite_deepslate_ore",
+    "#minecraft:needs_iron_tool"
+  ]
+}

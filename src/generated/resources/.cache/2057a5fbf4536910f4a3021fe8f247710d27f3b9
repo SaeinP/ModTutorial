@@ -1,4 +1,4 @@
-// 1.21	2025-12-28T00:05:36.8819796	Item Models: tutorialmod
+// 1.21	2025-12-29T05:46:18.8021738	Item Models: tutorialmod
 9c36309b9b22da0f2a38fda68096fcc3013c449b assets/tutorialmod/models/item/alexandrite.json
 9a4cf3b4fc3a6a6372ea70a3a5572d2c6c3ca1aa assets/tutorialmod/models/item/alexandrite_button.json
 4eba9df595e1c7ced9cd8c0f8f698096a01ce673 assets/tutorialmod/models/item/alexandrite_door.json
@@ -9,8 +9,15 @@ fa892c267c5f209b0b189c4e54a37055944d8757 assets/tutorialmod/models/item/cut_sapp
 e7ef11889e80da4ec66c036161cd0fe4a31eedb2 assets/tutorialmod/models/item/emerald_ring.json
 1509b12499fff0602eace813010f52ca1f7d1817 assets/tutorialmod/models/item/enchanted_sapphire_apple.json
 e258ae44c713edfe947ea29f86781698ddb4f414 assets/tutorialmod/models/item/magic_chisel.json
+174c94d5484e97413c01f35a7ad539b551c4e810 assets/tutorialmod/models/item/memoite.json
+9ba1650f9c4e8257ae120405806f4cb52eb538e8 assets/tutorialmod/models/item/memoite_axe.json
+52e0bec392e5aacc20a90e057930dadd3bbccab6 assets/tutorialmod/models/item/memoite_hoe.json
+1e161fd90461d67edf5c340fe4f40bdf4641537e assets/tutorialmod/models/item/memoite_pickaxe.json
+a45a221eb10e5168fcd10e9ff44c6d2fa516f1b9 assets/tutorialmod/models/item/memoite_shovel.json
+6b1b8a578ada86af1e25d81b22a08a5a1b1be56d assets/tutorialmod/models/item/memoite_sword.json
 008e0c64beb1a54d38a4e48491944cd4285257b1 assets/tutorialmod/models/item/opal_ring.json
 618bcb87cb7acab7c54afbe2ed857af447c05872 assets/tutorialmod/models/item/raw_alexandrite.json
+22b1b2289664a72b3a3e318328700828bdc54944 assets/tutorialmod/models/item/raw_memoite.json
 d24305376f58c1ef118279a5c8f5b087a07b1d47 assets/tutorialmod/models/item/raw_sapphire.json
 0a16bffc527696b64e4304b7efccfda93e2b9422 assets/tutorialmod/models/item/sapphire.json
 bdd7e27f29a21c8d5715c2a429a0474ee023176a assets/tutorialmod/models/item/sapphire_apple.json

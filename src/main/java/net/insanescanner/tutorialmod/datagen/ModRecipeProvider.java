@@ -24,11 +24,57 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MAGIC_CHISEL.get())
                 .pattern("A")
                 .pattern("B")
-                .define('A', ModItems.ALEXANDRITE.get())
+                .define('A', ModItems.MEMOITE.get())
                 .define('B', Items.BLAZE_ROD)
-                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get()))
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
                 .unlockedBy(getHasName(Items.BLAZE_ROD), has(Items.BLAZE_ROD))
                 .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_HOE.get())
+                .pattern("AA")
+                .pattern(" B")
+                .pattern(" B")
+                .define('A', ModItems.MEMOITE.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModItems.MEMOITE.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_SWORD.get())
+                .pattern("A")
+                .pattern("A")
+                .pattern("B")
+                .define('A', ModItems.MEMOITE.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_SHOVEL.get())
+                .pattern("A")
+                .pattern("B")
+                .pattern("B")
+                .define('A', ModItems.MEMOITE.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_AXE.get())
+                .pattern("AA")
+                .pattern("AB")
+                .pattern(" B")
+                .define('A', ModItems.MEMOITE.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
 
 
 
@@ -146,6 +192,12 @@ public class ModRecipeProvider extends RecipeProvider {
 
         oreSmelting(pRecipeOutput, ALEXANDRITE_SMELTABLE, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.5f, 200, "alexandrite");
         oreBlasting(pRecipeOutput, ALEXANDRITE_SMELTABLE, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.5f, 100, "alexandrite");
+
+        List<ItemLike> MEMOITE_SMELTABLE = List.of(ModItems.RAW_MEMOITE.get(), ModBlocks.MEMOITE_ORE.get(),
+                ModBlocks.MEMOITE_DEEPSLATE_ORE.get());
+
+        oreSmelting(pRecipeOutput, MEMOITE_SMELTABLE, RecipeCategory.MISC, ModItems.MEMOITE.get(), 0.5f, 200, "memoite");
+        oreBlasting(pRecipeOutput, MEMOITE_SMELTABLE, RecipeCategory.MISC, ModItems.MEMOITE.get(), 0.5f, 100, "memoite");
 
         List<ItemLike> SAPPHIRE_SMELTABLE = List.of(ModItems.RAW_SAPPHIRE.get(), ModBlocks.SAPPHIRE_ORE.get(),
                 ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());

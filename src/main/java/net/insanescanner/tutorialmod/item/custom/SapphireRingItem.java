@@ -13,6 +13,7 @@ import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Equipable;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -24,7 +25,7 @@ import java.util.List;
 
 public class SapphireRingItem extends Item implements Equipable {
     public static final ResourceLocation BASE_PLAYER_HEALTH = ResourceLocation.withDefaultNamespace("base_health");
-    public static final ResourceLocation BASE_PLAYER_JUMP = ResourceLocation.withDefaultNamespace("base_jump_strength");
+    public static final ResourceLocation BASE_PLAYER_ATTACK = ResourceLocation.withDefaultNamespace("base_player_attack");
 
     public SapphireRingItem(Properties pProperties) {
         super(pProperties);
@@ -32,7 +33,8 @@ public class SapphireRingItem extends Item implements Equipable {
 
     public static ItemAttributeModifiers createAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.MAX_HEALTH, new AttributeModifier(BASE_PLAYER_HEALTH, 6.0, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.OFFHAND)
+                .add(Attributes.MAX_HEALTH, new AttributeModifier(BASE_PLAYER_HEALTH, 4.0, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.OFFHAND)
+                .add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_PLAYER_ATTACK, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.OFFHAND)
                 .build();
     }
 
@@ -68,4 +70,5 @@ public class SapphireRingItem extends Item implements Equipable {
 
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
     }
+
 }

@@ -22,6 +22,8 @@
     "tutorialmod:alexandrite_slab",
     "tutorialmod:alexandrite_wall",
     "tutorialmod:alexandrite_door",
-    "tutorialmod:alexandrite_trapdoor"
+    "tutorialmod:alexandrite_trapdoor",
+    "tutorialmod:memoite_deepslate_ore",
+    "tutorialmod:memoite_ore"
   ]
 }

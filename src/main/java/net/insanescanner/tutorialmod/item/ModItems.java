@@ -3,14 +3,15 @@ package net.insanescanner.tutorialmod.item;
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.item.custom.*;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.UUID;
+
+import static net.minecraft.world.item.Items.registerItem;
 
 public class ModItems {
 
@@ -34,6 +35,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> CUT_SAPPHIRE = ITEMS.register("cut_sapphire",
             () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RAW_MEMOITE = ITEMS.register("raw_memoite",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> MEMOITE = ITEMS.register("memoite",
+            () -> new MemoiteItem(new Item.Properties()));
 
     public static final RegistryObject<Item> CUT_EMERALD = ITEMS.register("cut_emerald",
             () -> new Item(new Item.Properties()));
@@ -61,6 +68,31 @@ public class ModItems {
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> WRATH_REMNANT = ITEMS.register("wrath_remnant", () -> new WrathRemnantItem(new Item.Properties(), 1500));
+
+    public static final RegistryObject<Item> MEMOITE_SWORD = ITEMS.register("memoite_sword", () -> new MemoiteSwordItem(ModToolTiers.MEMOITE, new Item.Properties().attributes(SwordItem.createAttributes(
+            ModToolTiers.MEMOITE, 3, -2.4f
+    ))));
+
+    public static final RegistryObject<Item> MEMOITE_PICKAXE = ITEMS.register("memoite_pickaxe", () -> new MemoitePickaxeItem(ModToolTiers.MEMOITE, new Item.Properties().attributes(PickaxeItem.createAttributes(
+            ModToolTiers.MEMOITE, 1, -2.8f
+    ))));
+
+    public static final RegistryObject<Item> MEMOITE_SHOVEL = ITEMS.register("memoite_shovel", () -> new MemoiteShovelItem(ModToolTiers.MEMOITE, new Item.Properties().attributes(ShovelItem.createAttributes(
+            ModToolTiers.MEMOITE, 1.5f, -3.0f
+    ))));
+
+
+    public static final RegistryObject<Item> MEMOITE_AXE = ITEMS.register("memoite_axe", () -> new MemoiteAxeItem(ModToolTiers.MEMOITE, new Item.Properties().attributes(AxeItem.createAttributes(
+            ModToolTiers.MEMOITE, 6, -3.2f
+    ))));
+
+    public static final RegistryObject<Item> MEMOITE_HOE = ITEMS.register("memoite_hoe", () -> new MemoiteHoeItem(ModToolTiers.MEMOITE, new Item.Properties().attributes(HoeItem.createAttributes(
+            ModToolTiers.MEMOITE, 0, -3.0f
+    ))));
+
+
+
+
 
 
     public static void register(IEventBus eventBus){

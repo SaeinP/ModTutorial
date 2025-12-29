@@ -5,6 +5,8 @@
   "item.tutorialmod.sapphire": "Sapphire",
   "item.tutorialmod.cut_sapphire": "Cut Sapphire",
   "item.tutorialmod.cut_emerald": "Cut Emerald",
+  "item.tutorialmod.raw_memoite": "Raw Memoite",
+  "item.tutorialmod.memoite": "Memoite",
 
   "item.tutorialmod.wrath_remnant": "Remnant of Wrath",
 
@@ -12,6 +14,8 @@
   "item.tutorialmod.opal_ring": "Opal Ring",
   "item.tutorialmod.sapphire_ring": "Sapphire Ring",
   "item.tutorialmod.emerald_ring": "Emerald Ring",
+
+  "item.tutorialmod.memoite_sword": "Memoite Sword",
 
   "item.tutorialmod.sapphire_apple": "Sapphire Apple",
   "item.tutorialmod.enchanted_sapphire_apple": "Enchanted Sapphire Apple",
@@ -32,6 +36,8 @@
   "block.tutorialmod.alexandrite_deepslate_ore": "Alexandrite Deepslate Ore",
   "block.tutorialmod.sapphire_ore": "Sapphire Ore",
   "block.tutorialmod.sapphire_deepslate_ore": "Sapphire Deepslate Ore",
+  "block.tutorialmod.memoite_ore": "Memoite Ore",
+  "block.tutorialmod.memoite_deepslate_ore": "Memoite Deepslate Ore",
 
   "block.tutorialmod.alexandrite_stairs": "Alexandrite Stairs",
   "block.tutorialmod.alexandrite_slab": "Alexandrite Slab",

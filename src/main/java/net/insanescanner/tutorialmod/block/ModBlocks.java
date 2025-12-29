@@ -49,6 +49,14 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(3,5),BlockBehaviour.Properties.of().strength(5f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final RegistryObject<Block> MEMOITE_ORE = registerBlock("memoite_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2,4),BlockBehaviour.Properties.of().strength(3f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE).lightLevel(state -> 5)));
+
+    public static final RegistryObject<Block> MEMOITE_DEEPSLATE_ORE = registerBlock("memoite_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3,5),BlockBehaviour.Properties.of().strength(4f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE).lightLevel(state -> 5)));
+
     public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
             () -> new DropExperienceBlock(UniformInt.of(3,5),BlockBehaviour.Properties.of().strength(3f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));

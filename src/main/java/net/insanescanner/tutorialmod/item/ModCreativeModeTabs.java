@@ -21,6 +21,8 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output)-> {
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
+                        output.accept(ModItems.MEMOITE.get());
+                        output.accept(ModItems.RAW_MEMOITE.get());
                         output.accept(ModItems.RAW_SAPPHIRE.get());
                         output.accept(ModItems.SAPPHIRE.get());
                         output.accept(ModItems.CUT_SAPPHIRE.get());
@@ -32,6 +34,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SAPPHIRE_RING.get());
                         output.accept(ModItems.CUT_EMERALD.get());
                         output.accept(ModItems.WRATH_REMNANT.get());
+
+                        output.accept(ModItems.MEMOITE_PICKAXE.get());
+                        output.accept(ModItems.MEMOITE_SHOVEL.get());
+                        output.accept(ModItems.MEMOITE_HOE.get());
+                        output.accept(ModItems.MEMOITE_AXE.get());
+                        output.accept(ModItems.MEMOITE_SWORD.get());
                     }).build());
 
 
@@ -91,6 +99,12 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.OPAL_RING.get());
                                 output.accept(ModItems.SAPPHIRE_RING.get());
                                 output.accept(ModItems.EMERALD_RING.get());
+
+                                output.accept(ModItems.MEMOITE_PICKAXE.get());
+                                output.accept(ModItems.MEMOITE_SHOVEL.get());
+                                output.accept(ModItems.MEMOITE_HOE.get());
+                                output.accept(ModItems.MEMOITE_AXE.get());
+                                output.accept(ModItems.MEMOITE_SWORD.get());
                             }).build());
 
     public static void register(IEventBus eventBus){

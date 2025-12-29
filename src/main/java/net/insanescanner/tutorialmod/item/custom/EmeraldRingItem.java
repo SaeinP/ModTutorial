@@ -20,7 +20,7 @@ public class EmeraldRingItem extends Item implements Equipable {
 
     public static ItemAttributeModifiers createAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(BASE_PLAYER_DEFENSE, 6.0, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.OFFHAND)
+                .add(Attributes.ARMOR, new AttributeModifier(BASE_PLAYER_DEFENSE, 2.0, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.OFFHAND)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(BASE_PLAYER_TOUGHNESS, 2.0, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.OFFHAND)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(BASE_PLAYER_KNOCKBACK_RES, 1.0, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.OFFHAND)
                 .build();

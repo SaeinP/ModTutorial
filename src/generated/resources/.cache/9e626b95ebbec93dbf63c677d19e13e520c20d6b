@@ -1,8 +1,10 @@
-// 1.21	2025-12-27T23:42:26.265457	Tags for minecraft:block mod id tutorialmod
+// 1.21	2025-12-29T05:27:59.8566434	Tags for minecraft:block mod id tutorialmod
 7040c1554c67074e06991cf7ea99e691acfb8ddc data/minecraft/tags/block/fences.json
 8f61b67394cb2303f2111446266a199eeff13c4d data/minecraft/tags/block/fence_gates.json
-530f7ba46a4e6bdab1f950c552e3f031cbc48fb8 data/minecraft/tags/block/mineable/pickaxe.json
+4984263eea4d3b7ca09fd0059f48a1d050eb00ad data/minecraft/tags/block/mineable/pickaxe.json
 916ec1fecbc7e790e089cd49cd933ed431f7a909 data/minecraft/tags/block/needs_diamond_tool.json
-b106aff0bdb7b77fb08c4f8a67052151a3d9307b data/minecraft/tags/block/needs_iron_tool.json
+c6115bf1f39aa3016d2478f60bd53e2d497de463 data/minecraft/tags/block/needs_iron_tool.json
 f30a6367dbc22bbef01d6bf2a992f645005f83b5 data/minecraft/tags/block/needs_stone_tool.json
 e6dfaa2212b26282ddb31293aef983be64e2c864 data/minecraft/tags/block/walls.json
+7dd9305f15d30e8f9e7f46197b6c817512fe2a34 data/tutorialmod/tags/block/incorrect_for_memoite_tool.json
+59ae9b20a3960df1fb1014b0089cb8d80a537a8b data/tutorialmod/tags/block/needs_memoite_tool.json

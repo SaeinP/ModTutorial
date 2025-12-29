@@ -81,7 +81,10 @@ public class TutorialMod
             event.accept(ModBlocks.ALEXANDRITE_ORE.get());
             event.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
             event.accept(ModBlocks.ALEXANDRITE_LAMP);
+            event.accept(ModBlocks.MEMOITE_ORE.get());
+            event.accept(ModBlocks.MEMOITE_DEEPSLATE_ORE.get());
             event.accept(ModBlocks.MAGIC_BLOCK.get());
+
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
@@ -89,6 +92,11 @@ public class TutorialMod
             event.accept(ModItems.OPAL_RING.get());
             event.accept(ModItems.SAPPHIRE_RING.get());
             event.accept(ModItems.EMERALD_RING.get());
+            event.accept(ModItems.MEMOITE_PICKAXE.get());
+            event.accept(ModItems.MEMOITE_SHOVEL.get());
+            event.accept(ModItems.MEMOITE_HOE.get());
+            event.accept(ModItems.MEMOITE_AXE.get());
+            event.accept(ModItems.MEMOITE_SWORD.get());
         }
 
     }
