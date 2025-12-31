@@ -40,6 +40,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MEMOITE_HOE.get());
                         output.accept(ModItems.MEMOITE_AXE.get());
                         output.accept(ModItems.MEMOITE_SWORD.get());
+                        output.accept(ModItems.MEMOITE_HAMMER.get());
+
+                        output.accept(ModItems.MEMOITE_HELMET.get());
+                        output.accept(ModItems.MEMOITE_CHESTPLATE.get());
+                        output.accept(ModItems.MEMOITE_LEGGING.get());
+                        output.accept(ModItems.MEMOITE_BOOTS.get());
+
+                        output.accept(ModItems.MEMOITE_HORSE_ARMOR.get());
+                        output.accept(ModItems.INSANESCANNER_SMITHING_TEMPLATE.get());
                     }).build());
 
 

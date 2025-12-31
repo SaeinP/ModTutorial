@@ -7,6 +7,7 @@ import net.insanescanner.tutorialmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -27,5 +28,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ModTags.Items.SWORDS_ABOVE_STONE).add(Items.IRON_SWORD).add(Items.DIAMOND_SWORD).add(Items.NETHERITE_SWORD).add(Items.GOLDEN_SWORD).add(Items.STONE_SWORD);
 
         tag(ModTags.Items.SAPPHIRE_BLOCKS).add(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get().asItem()).add(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get().asItem());
+
+        tag(ItemTags.TRIMMABLE_ARMOR).add(ModItems.MEMOITE_HELMET.get()).add(ModItems.MEMOITE_CHESTPLATE.get())
+                .add(ModItems.MEMOITE_LEGGING.get()).add(ModItems.MEMOITE_BOOTS.get());
+
+        tag(ItemTags.TRIM_MATERIALS).add(ModItems.MEMOITE.get());
+
+        tag(ItemTags.TRIM_TEMPLATES).add(ModItems.INSANESCANNER_SMITHING_TEMPLATE.get());
     }
 }

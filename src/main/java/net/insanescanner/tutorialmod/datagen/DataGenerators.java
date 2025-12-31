@@ -43,7 +43,7 @@ public class DataGenerators {
 
 
         generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput, lookupProvider));
-
+        generator.addProvider(event.includeServer(), new ModDatapackEntries(packOutput, lookupProvider));
     }
 
 

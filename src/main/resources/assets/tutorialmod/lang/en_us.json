@@ -15,7 +15,21 @@
   "item.tutorialmod.sapphire_ring": "Sapphire Ring",
   "item.tutorialmod.emerald_ring": "Emerald Ring",
 
+  "item.tutorialmod.insanescanner_armor_trim_smithing_template": "Smithing Template",
+
   "item.tutorialmod.memoite_sword": "Memoite Sword",
+  "item.tutorialmod.memoite_axe": "Memoite Axe",
+  "item.tutorialmod.memoite_hoe": "Memoite Hoe",
+  "item.tutorialmod.memoite_pickaxe": "Memoite Pickaxe",
+  "item.tutorialmod.memoite_shovel": "Memoite Shovel",
+  "item.tutorialmod.memoite_hammer": "Memoite Hammer",
+
+  "item.tutorialmod.memoite_helmet": "Memoite Helmet",
+  "item.tutorialmod.memoite_chestplate": "Memoite Chestplate",
+  "item.tutorialmod.memoite_legging": "Memoite Leggings",
+  "item.tutorialmod.memoite_boots": "Memoite Boots",
+
+  "item.tutorialmod.memoite_horse_armor": "Memoite Horse Armor",
 
   "item.tutorialmod.sapphire_apple": "Sapphire Apple",
   "item.tutorialmod.enchanted_sapphire_apple": "Enchanted Sapphire Apple",
@@ -61,6 +75,9 @@
 
   "tooltip.tutorialmod.cursedfuelitem.tooltip":"THIS ITEM CARRIES AN §kANGUISHED SOUL§r. IT WILL AFFECT YOU WHILE CARRIED, YET BURNS BRIGHTLY AS §9FUEL§r.",
   "tooltip.tutorialmod.sapphire_ring.shifted": "CONTAINS THE POWER OF WATER, WHEN IN OFFHAND GIVES USER BOONS OF WATER.",
-  "tooltip.tutorialmod.sapphire_ring.non_shifted": "PRESS §1§nSHIFT§r TO REVEAL MORE INFORMATION"
+  "tooltip.tutorialmod.sapphire_ring.non_shifted": "PRESS §1§nSHIFT§r TO REVEAL MORE INFORMATION",
+
+  "trim_pattern.tutorialmod.insanescanner": "Insane Armor Trim",
+  "trim_material.tutorialmod.memoite": "Memoite Armor Trim"
 
 }

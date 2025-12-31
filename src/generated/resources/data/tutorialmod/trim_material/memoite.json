@@ -1,0 +1,9 @@
+{
+  "asset_name": "memoite",
+  "description": {
+    "color": "#031CFC",
+    "translate": "trim_material.tutorialmod.memoite"
+  },
+  "ingredient": "tutorialmod:memoite",
+  "item_model_index": 0.8
+}

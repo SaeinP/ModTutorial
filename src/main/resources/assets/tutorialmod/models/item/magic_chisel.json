@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tutorialmod:item/magic_chisel"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "tutorialmod:used": 1
+      },
+      "model": "tutorialmod:item/magic_chisel_used"
+
+    }
+
+  ]
+}

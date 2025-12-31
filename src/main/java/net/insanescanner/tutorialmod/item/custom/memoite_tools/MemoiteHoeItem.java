@@ -1,4 +1,4 @@
-package net.insanescanner.tutorialmod.item.custom;
+package net.insanescanner.tutorialmod.item.custom.memoite_tools;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;

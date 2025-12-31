@@ -84,6 +84,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.NEEDS_MEMOITE_TOOL).add(ModBlocks.MEMOITE_ORE.get())
                 .add(ModBlocks.MEMOITE_DEEPSLATE_ORE.get()).addTags(BlockTags.NEEDS_IRON_TOOL);
 
-        tag(ModTags.Blocks.INCORRECT_FOR_MEMOITE_TOOL).addTags(BlockTags.INCORRECT_FOR_IRON_TOOL).remove(ModTags.Blocks.NEEDS_MEMOITE_TOOL);
+        tag(ModTags.Blocks.INCORRECT_FOR_MEMOITE_TOOL).addTags(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .remove(ModTags.Blocks.NEEDS_MEMOITE_TOOL);
     }
 }

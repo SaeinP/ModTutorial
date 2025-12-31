@@ -2,7 +2,9 @@ package net.insanescanner.tutorialmod.item;
 
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.item.custom.*;
+import net.insanescanner.tutorialmod.item.custom.memoite_tools.*;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -90,6 +92,29 @@ public class ModItems {
             ModToolTiers.MEMOITE, 0, -3.0f
     ))));
 
+    public static final RegistryObject<Item> MEMOITE_HAMMER = ITEMS.register("memoite_hammer", () -> new MemoiteHammerItem(ModToolTiers.MEMOITE, new Item.Properties().attributes(PickaxeItem.createAttributes(
+            ModToolTiers.MEMOITE, 7, -3.5f
+    ))));
+
+    public static final RegistryObject<Item> MEMOITE_HELMET = ITEMS.register("memoite_helmet", () -> new ModArmorItem(ModArmorMaterials.MEMOITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(32))));
+
+    public static final RegistryObject<Item> MEMOITE_CHESTPLATE = ITEMS.register("memoite_chestplate", () -> new ArmorItem(ModArmorMaterials.MEMOITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+            new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(32))));
+
+    public static final RegistryObject<Item> MEMOITE_LEGGING = ITEMS.register("memoite_legging", () -> new ArmorItem(ModArmorMaterials.MEMOITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+            new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(32))));
+
+    public static final RegistryObject<Item> MEMOITE_BOOTS = ITEMS.register("memoite_boots", () -> new ArmorItem(ModArmorMaterials.MEMOITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+            new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(32))));
+
+    public static final RegistryObject<Item> MEMOITE_HORSE_ARMOR = ITEMS.register("memoite_horse_armor", () -> new AnimalArmorItem(ModArmorMaterials.MEMOITE_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+            false, new Item.Properties().stacksTo(1))
+            );
+
+    public static final RegistryObject<Item> INSANESCANNER_SMITHING_TEMPLATE = ITEMS.register("insanescanner_armor_trim_smithing_template", () ->
+            SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "insanescanner"))
+            );
 
 
 

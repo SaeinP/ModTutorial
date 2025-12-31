@@ -1,4 +1,7 @@
-// 1.21	2025-12-27T04:38:51.6421224	Tags for minecraft:item mod id tutorialmod
+// 1.21	2025-12-31T03:13:32.7674559	Tags for minecraft:item mod id tutorialmod
+c75195f810ce5490fc8f346c29cb3dce45ed25da data/minecraft/tags/item/trimmable_armor.json
+c97e271327ce6114812327cb5f96b99f66e82937 data/minecraft/tags/item/trim_materials.json
+814546b361c6d6aba512b6f00f8fbbf48233fb2c data/minecraft/tags/item/trim_templates.json
 98e5788814ef4176ec95b127dde6e80709d65505 data/tutorialmod/tags/item/sapphire_blocks.json
 cd081d6f81e45037ec8b0c0c816d23c6a9e58418 data/tutorialmod/tags/item/swords_above_stone.json
 e3e1c196e0c1b3e567718b451c7e2b0736d9979a data/tutorialmod/tags/item/transformable_to_emerald.json

@@ -5,6 +5,7 @@ import net.insanescanner.tutorialmod.block.ModBlocks;
 import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
 import net.insanescanner.tutorialmod.item.ModCreativeModeTabs;
 import net.insanescanner.tutorialmod.item.ModItems;
+import net.insanescanner.tutorialmod.util.ModItemProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -97,6 +98,13 @@ public class TutorialMod
             event.accept(ModItems.MEMOITE_HOE.get());
             event.accept(ModItems.MEMOITE_AXE.get());
             event.accept(ModItems.MEMOITE_SWORD.get());
+            event.accept(ModItems.MEMOITE_HAMMER.get());
+            event.accept(ModItems.MEMOITE_HELMET.get());
+            event.accept(ModItems.MEMOITE_CHESTPLATE.get());
+            event.accept(ModItems.MEMOITE_LEGGING.get());
+            event.accept(ModItems.MEMOITE_BOOTS.get());
+            event.accept(ModItems.MEMOITE_HORSE_ARMOR.get());
+            event.accept(ModItems.INSANESCANNER_SMITHING_TEMPLATE);
         }
 
     }
@@ -115,7 +123,7 @@ public class TutorialMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            ModItemProperties.addCustomProperties();
         }
     }
 }

@@ -7,6 +7,7 @@ import net.insanescanner.tutorialmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -75,6 +76,44 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
                 .save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_HAMMER.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .pattern(" B ")
+                .define('A', ModItems.MEMOITE.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_HELMET.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .define('A', ModItems.MEMOITE.get())
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_CHESTPLATE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.MEMOITE.get())
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_LEGGING.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.MEMOITE.get())
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_BOOTS.get())
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.MEMOITE.get())
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
 
 
 
@@ -229,6 +268,7 @@ public class ModRecipeProvider extends RecipeProvider {
         stairBuilder(ModBlocks.POLISHED_SAPPHIRE_STAIR.get(), Ingredient.of(ModBlocks.POLISHED_SAPPHIRE_BLOCK.get())).group("sapphire").unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get())).save(pRecipeOutput);
         slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_SAPPHIRE_SLAB.get(), ModBlocks.POLISHED_SAPPHIRE_BLOCK.get());
 
+        trimSmithing(pRecipeOutput, ModItems.INSANESCANNER_SMITHING_TEMPLATE.get(), ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "insanescanner"));
     }
 
     protected static void oreSmelting(

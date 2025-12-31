@@ -1,6 +1,5 @@
-package net.insanescanner.tutorialmod.item.custom;
+package net.insanescanner.tutorialmod.item.custom.memoite_tools;
 
-import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;

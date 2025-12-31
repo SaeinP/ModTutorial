@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "tutorialmod:item/magic_chisel"
+    "layer0": "tutorialmod:item/magic_chisel_used"
   }
 }

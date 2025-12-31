@@ -1,20 +1,19 @@
-package net.insanescanner.tutorialmod.item.custom;
+package net.insanescanner.tutorialmod.item.custom.memoite_tools;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 
 import java.util.List;
 
-public class MemoitePickaxeItem extends PickaxeItem {
+public class MemoiteShovelItem extends ShovelItem {
 
 
-    public MemoitePickaxeItem(Tier pTier, Properties pProperties) {
+    public MemoiteShovelItem(Tier pTier, Properties pProperties) {
         super(pTier, pProperties);
     }
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
-        
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
     }
 }

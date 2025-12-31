@@ -1,0 +1,8 @@
+{
+  "asset_id": "tutorialmod:insanescanner",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.tutorialmod.insanescanner"
+  },
+  "template_item": "tutorialmod:insanescanner_armor_trim_smithing_template"
+}
