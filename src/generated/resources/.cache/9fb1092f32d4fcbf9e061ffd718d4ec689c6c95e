@@ -1,4 +1,4 @@
-// 1.21	2025-12-31T03:13:32.7649479	Recipes
+// 1.21	2026-01-01T02:11:42.1519601	Recipes
 91a1b0c443bceae33c3283d52470dc8008f27640 data/tutorialmod/advancement/recipes/building_blocks/alexandrite_slab.json
 f464673951035769e6b82b339887abe59ca88ca8 data/tutorialmod/advancement/recipes/building_blocks/alexandrite_stair.json
 4b42a990260ae614514fc37a4503dd24d0e2b3ec data/tutorialmod/advancement/recipes/building_blocks/alexandrite_wall.json
@@ -22,6 +22,7 @@ d2bccfa33c98f7996aac52b765f506dab3d8c5ef data/tutorialmod/advancement/recipes/mi
 a208d4eae1ae45e5976f7149864fdd5a50fbce8f data/tutorialmod/advancement/recipes/misc/magic_chisel.json
 83e854c1b1ba8f88538bf7be64d7745756abdfa5 data/tutorialmod/advancement/recipes/misc/memoite_axe.json
 85789252d06e8650bdcc066839ab131e943e1865 data/tutorialmod/advancement/recipes/misc/memoite_boots.json
+bd2a0b57151b6222bf3fc4641e0b67ecb86e6368 data/tutorialmod/advancement/recipes/misc/memoite_bow.json
 e0783c32934ce8a0dc2772a590fac5892dfb2a59 data/tutorialmod/advancement/recipes/misc/memoite_chestplate.json
 cd6246765984126b1a466978ad62a4cc4caf8adc data/tutorialmod/advancement/recipes/misc/memoite_from_blasting_memoite_deepslate_ore.json
 a5aa5c905264a6be2ff24d2ce80cef03f94719b3 data/tutorialmod/advancement/recipes/misc/memoite_from_blasting_memoite_ore.json
@@ -77,6 +78,7 @@ b1708962a675ccf49e511c4f3f2a968f620c4cf2 data/tutorialmod/recipe/alexandrite_tra
 09a7376d823ca055921c720bf6367195ecb83c5a data/tutorialmod/recipe/magic_chisel.json
 ccd7a7fba99387f7149d73b2510cd573b5ddca05 data/tutorialmod/recipe/memoite_axe.json
 e8e44ed30155c61fc4d8f8c0be33d337f71489cb data/tutorialmod/recipe/memoite_boots.json
+bc8a3459cbe6a01cc4ef29dad283dddde070625d data/tutorialmod/recipe/memoite_bow.json
 a1edec1bae0850c5da6493aa398eae1c92b6699b data/tutorialmod/recipe/memoite_chestplate.json
 7e817108c5994fa777a8589a458ff66c4408657a data/tutorialmod/recipe/memoite_from_blasting_memoite_deepslate_ore.json
 7d682a955cee45593754727fa5fd7f53a3e8314a data/tutorialmod/recipe/memoite_from_blasting_memoite_ore.json
