@@ -41,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MEMOITE_AXE.get());
                         output.accept(ModItems.MEMOITE_SWORD.get());
                         output.accept(ModItems.MEMOITE_HAMMER.get());
+                        output.accept(ModItems.MEMOITE_BOW.get());
 
                         output.accept(ModItems.MEMOITE_HELMET.get());
                         output.accept(ModItems.MEMOITE_CHESTPLATE.get());
@@ -114,6 +115,7 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.MEMOITE_HOE.get());
                                 output.accept(ModItems.MEMOITE_AXE.get());
                                 output.accept(ModItems.MEMOITE_SWORD.get());
+                                output.accept(ModItems.MEMOITE_BOW.get());
                             }).build());
 
     public static void register(IEventBus eventBus){

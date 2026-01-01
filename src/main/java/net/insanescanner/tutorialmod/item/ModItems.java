@@ -116,6 +116,8 @@ public class ModItems {
             SmithingTemplateItem.createArmorTrimTemplate(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "insanescanner"))
             );
 
+    public static final RegistryObject<Item> MEMOITE_BOW = ITEMS.register("memoite_bow", () -> new BowItem(new Item.Properties().durability(500)));
+
 
 
 

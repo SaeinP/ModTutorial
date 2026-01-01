@@ -85,6 +85,15 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
                 .save(pRecipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_BOW.get())
+                .pattern(" AB")
+                .pattern("A B")
+                .pattern(" AB")
+                .define('A', ModItems.MEMOITE.get())
+                .define('B', Items.STRING)
+                .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
+                .save(pRecipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_HELMET.get())
                 .pattern("AAA")
                 .pattern("A A")
