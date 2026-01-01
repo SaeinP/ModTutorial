@@ -1,11 +1,18 @@
 package net.insanescanner.tutorialmod.event;
 
 import net.insanescanner.tutorialmod.TutorialMod;
+import net.insanescanner.tutorialmod.item.ModItems;
+import net.insanescanner.tutorialmod.item.custom.ModArmorMaterials;
 import net.insanescanner.tutorialmod.item.custom.memoite_tools.MemoiteHammerItem;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -39,5 +46,28 @@ public class ModEvents {
             }
 
         }
+    }
+    @SubscribeEvent
+    public static void onLivingDamagEvent(LivingDamageEvent event){
+        if(event.getEntity() instanceof Player player){
+            boolean memoite = true;
+            for(ItemStack item : player.getArmorSlots()){
+                if(!(item.getItem() instanceof ArmorItem armorItem)){
+                    memoite = false;
+                    break;
+                }
+
+                if(armorItem.getMaterial() != ModArmorMaterials.MEMOITE_ARMOR_MATERIAL){
+                    memoite = false;
+                    break;
+                }
+            }
+
+            if(memoite){
+                player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 1, true, false));
+                player.sendSystemMessage(Component.literal("Bro stop taking damage"));
+            }
+        }
+
     }
 }

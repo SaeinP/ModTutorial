@@ -4,6 +4,7 @@ import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.block.custom.AlexandriteLampBlock;
 import net.insanescanner.tutorialmod.block.custom.MagicBlock;
 import net.insanescanner.tutorialmod.item.ModItems;
+import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -67,7 +68,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f)
-                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+                    .requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final RegistryObject<StairBlock> UNPOLISHED_SAPPHIRE_STAIR = registerBlock("unpolished_sapphire_stair",
             () -> new StairBlock(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get().defaultBlockState(),
