@@ -3,6 +3,7 @@ package net.insanescanner.tutorialmod.item;
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.item.custom.*;
 import net.insanescanner.tutorialmod.item.custom.memoite_tools.*;
+import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
@@ -96,6 +97,10 @@ public class ModItems {
             ModToolTiers.MEMOITE, 7, -3.5f
     ))));
 
+    public static final RegistryObject<Item> MEMOITE_ORE_MINER = ITEMS.register("memoite_ore_miner", () -> new MemoiteOreMinerItem(ModToolTiers.MEMOITE, new Item.Properties().attributes(PickaxeItem.createAttributes(
+            ModToolTiers.MEMOITE, 7, -3.5f
+    ))));
+
     public static final RegistryObject<Item> MEMOITE_HELMET = ITEMS.register("memoite_helmet", () -> new ModArmorItem(ModArmorMaterials.MEMOITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
             new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(32))));
 
@@ -118,7 +123,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> MEMOITE_BOW = ITEMS.register("memoite_bow", () -> new BowItem(new Item.Properties().durability(500)));
 
-
+    public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc", () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).stacksTo(1)));
 
 
 

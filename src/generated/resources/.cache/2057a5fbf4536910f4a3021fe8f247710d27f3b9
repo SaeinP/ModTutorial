@@ -1,9 +1,10 @@
-// 1.21	2025-12-31T05:54:43.7384622	Item Models: tutorialmod
+// 1.21	2026-01-01T23:27:15.3461848	Item Models: tutorialmod
 9c36309b9b22da0f2a38fda68096fcc3013c449b assets/tutorialmod/models/item/alexandrite.json
 9a4cf3b4fc3a6a6372ea70a3a5572d2c6c3ca1aa assets/tutorialmod/models/item/alexandrite_button.json
 4eba9df595e1c7ced9cd8c0f8f698096a01ce673 assets/tutorialmod/models/item/alexandrite_door.json
 11dfa7af9b5aa4f86ae1094d2cb8d78a81abef0e assets/tutorialmod/models/item/alexandrite_fence.json
 b9a62ed3fc1c7a5a754d17fb335771f6cfa7112d assets/tutorialmod/models/item/alexandrite_wall.json
+f746b64540daf2ab6302b3ec01a78490c48fc10b assets/tutorialmod/models/item/bar_brawl_music_disc.json
 a6cbf7d9a9f6bba6247146c14978a902ef1546e3 assets/tutorialmod/models/item/cut_emerald.json
 fa892c267c5f209b0b189c4e54a37055944d8757 assets/tutorialmod/models/item/cut_sapphire.json
 e7ef11889e80da4ec66c036161cd0fe4a31eedb2 assets/tutorialmod/models/item/emerald_ring.json
@@ -58,6 +59,7 @@ aeaeb84ff137e791df6b8a284d6e67e4202fc0f4 assets/tutorialmod/models/item/memoite_
 3b4504162b36f8983a37d0bd4252f7c8d3bd8322 assets/tutorialmod/models/item/memoite_legging_netherite_trim.json
 c52df072f396df9a2657c0ed508b97a820ef7fd4 assets/tutorialmod/models/item/memoite_legging_quartz_trim.json
 16e897fee35c112bed4b8b4690745963e8626e05 assets/tutorialmod/models/item/memoite_legging_redstone_trim.json
+a74492278f8d281305d702bfb7e7a4afaeacc436 assets/tutorialmod/models/item/memoite_ore_miner.json
 1e161fd90461d67edf5c340fe4f40bdf4641537e assets/tutorialmod/models/item/memoite_pickaxe.json
 a45a221eb10e5168fcd10e9ff44c6d2fa516f1b9 assets/tutorialmod/models/item/memoite_shovel.json
 6b1b8a578ada86af1e25d81b22a08a5a1b1be56d assets/tutorialmod/models/item/memoite_sword.json

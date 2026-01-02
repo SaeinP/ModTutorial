@@ -79,6 +79,15 @@
   "tooltip.tutorialmod.sapphire_ring.non_shifted": "PRESS §1§nSHIFT§r TO REVEAL MORE INFORMATION",
 
   "trim_pattern.tutorialmod.insanescanner": "Insane Armor Trim",
-  "trim_material.tutorialmod.memoite": "Memoite Armor Trim"
+  "trim_material.tutorialmod.memoite": "Memoite Armor Trim",
 
+  "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.tutorialmod.bar_brawl_music_disc.desc": "Bar Brawl - Bryan Tech",
+
+  "item.tutorialmod.memoite_ore_miner": "Memoite Ore Miner",
+  "effect.tutorialmod.slimey": "Slimey",
+
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion"
 }

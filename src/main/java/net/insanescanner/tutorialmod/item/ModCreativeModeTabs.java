@@ -116,6 +116,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.MEMOITE_AXE.get());
                                 output.accept(ModItems.MEMOITE_SWORD.get());
                                 output.accept(ModItems.MEMOITE_BOW.get());
+                                output.accept(ModItems.MEMOITE_ORE_MINER.get());
+                                output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
                             }).build());
 
     public static void register(IEventBus eventBus){

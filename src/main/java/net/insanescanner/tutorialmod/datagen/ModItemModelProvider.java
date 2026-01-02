@@ -51,6 +51,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.MEMOITE.get());
         basicItem(ModItems.RAW_MEMOITE.get());
 
+        basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
 
 
         handheldItem(ModItems.MEMOITE_SWORD);
@@ -59,6 +60,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.MEMOITE_AXE);
         handheldItem(ModItems.MEMOITE_HOE);
         handheldItem(ModItems.MEMOITE_HAMMER);
+        handheldItem(ModItems.MEMOITE_ORE_MINER);
 
         basicItem(ModItems.RAW_SAPPHIRE.get());
         basicItem(ModItems.SAPPHIRE.get());

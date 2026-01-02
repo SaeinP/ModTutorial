@@ -3,8 +3,10 @@ package net.insanescanner.tutorialmod;
 import com.mojang.logging.LogUtils;
 import net.insanescanner.tutorialmod.block.ModBlocks;
 import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
+import net.insanescanner.tutorialmod.effects.ModEffects;
 import net.insanescanner.tutorialmod.item.ModCreativeModeTabs;
 import net.insanescanner.tutorialmod.item.ModItems;
+import net.insanescanner.tutorialmod.potion.ModPotions;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.insanescanner.tutorialmod.util.ModItemProperties;
 import net.minecraft.world.item.CreativeModeTab;
@@ -50,6 +52,8 @@ public class TutorialMod
         ModBlocks.register(modEventBus);
         ModDataComponentTypes.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -108,6 +112,7 @@ public class TutorialMod
             event.accept(ModItems.MEMOITE_BOOTS.get());
             event.accept(ModItems.MEMOITE_HORSE_ARMOR.get());
             event.accept(ModItems.INSANESCANNER_SMITHING_TEMPLATE);
+            event.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
         }
 
     }
