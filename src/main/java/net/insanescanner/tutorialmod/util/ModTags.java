@@ -26,6 +26,10 @@ public class ModTags {
 
         public static final TagKey<Item> SAPPHIRE_BLOCKS = createTag("sapphire_blocks");
 
+        public static final TagKey<Item> MEMOITE_WEAPONS = createTag("memoite_weapons");
+
+
+
         private static TagKey<Item> createTag(String name){
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, name));
         }

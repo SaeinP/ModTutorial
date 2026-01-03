@@ -11,6 +11,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -35,5 +36,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.TRIM_MATERIALS).add(ModItems.MEMOITE.get());
 
         tag(ItemTags.TRIM_TEMPLATES).add(ModItems.INSANESCANNER_SMITHING_TEMPLATE.get());
+
+        tag(ModTags.Items.MEMOITE_WEAPONS).add(ModItems.MEMOITE_AXE.get()).add(ModItems.MEMOITE_SWORD.get());
+
+        tag(ItemTags.SWORD_ENCHANTABLE).addTags(ModTags.Items.MEMOITE_WEAPONS);
+
+        tag(ItemTags.WEAPON_ENCHANTABLE).addTags(ModTags.Items.MEMOITE_WEAPONS);
     }
 }
