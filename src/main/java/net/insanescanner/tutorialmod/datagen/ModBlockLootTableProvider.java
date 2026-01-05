@@ -2,7 +2,9 @@ package net.insanescanner.tutorialmod.datagen;
 
 import net.insanescanner.tutorialmod.block.ModBlocks;
 import net.insanescanner.tutorialmod.block.custom.AlexandriteLampBlock;
+import net.insanescanner.tutorialmod.block.custom.SpinachCropBlock;
 import net.insanescanner.tutorialmod.item.ModItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -23,6 +25,7 @@ import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
@@ -86,6 +89,14 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.SAPPHIRE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get(), 1, 1));
+
+        LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.SPINACH_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SpinachCropBlock.AGE, SpinachCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.SPINACH_CROP.get(), this.createCropDrops(ModBlocks.SPINACH_CROP.get(),
+            ModItems.SPINACH.get(), ModItems.SPINACH_SEED.get(), lootItemConditionBuilder));
+
+
     }
 
 

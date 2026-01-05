@@ -96,5 +96,9 @@
   "painting.tutorialmod.watchingyou.title": "Watching You",
   "painting.tutorialmod.watchingyou.author": "InsaneScanner",
 
-  "enchantment.tutorialmod.lightning_striker": "Lightning Striker"
+  "enchantment.tutorialmod.lightning_striker": "Lightning Striker",
+
+  "item.tutorialmod.spinach_seed": "Spinach Seed",
+  "item.tutorialmod.spinach": "Spinach",
+  "block.tutorialmod.spinach_crop": "Spinach Crop"
 }

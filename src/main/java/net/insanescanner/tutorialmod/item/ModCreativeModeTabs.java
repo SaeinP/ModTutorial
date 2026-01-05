@@ -50,6 +50,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.MEMOITE_HORSE_ARMOR.get());
                         output.accept(ModItems.INSANESCANNER_SMITHING_TEMPLATE.get());
+
+                        output.accept(ModItems.SPINACH_SEED.get());
                     }).build());
 
 
@@ -118,6 +120,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.MEMOITE_BOW.get());
                                 output.accept(ModItems.MEMOITE_ORE_MINER.get());
                                 output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+
+                                output.accept(ModItems.SPINACH_SEED.get());
                             }).build());
 
     public static void register(IEventBus eventBus){

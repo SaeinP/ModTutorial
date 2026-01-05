@@ -1,11 +1,14 @@
 package net.insanescanner.tutorialmod.item;
 
 import net.insanescanner.tutorialmod.TutorialMod;
+import net.insanescanner.tutorialmod.block.ModBlocks;
 import net.insanescanner.tutorialmod.item.custom.*;
 import net.insanescanner.tutorialmod.item.custom.memoite_tools.*;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -70,6 +73,9 @@ public class ModItems {
             ITEMS.register("enchanted_sapphire_apple", () -> new Item(new Item.Properties().food(ModFoodProperties.ENCHANTED_SAPPHIRE_APPLE)
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(Rarity.EPIC)));
 
+    public static final RegistryObject<Item> SPINACH =
+            ITEMS.register("spinach", () -> new Item(new Item.Properties().food(Foods.BEETROOT).rarity(Rarity.COMMON)));
+
     public static final RegistryObject<Item> WRATH_REMNANT = ITEMS.register("wrath_remnant", () -> new WrathRemnantItem(new Item.Properties(), 1500));
 
     public static final RegistryObject<Item> MEMOITE_SWORD = ITEMS.register("memoite_sword", () -> new MemoiteSwordItem(ModToolTiers.MEMOITE, new Item.Properties().attributes(SwordItem.createAttributes(
@@ -124,6 +130,9 @@ public class ModItems {
     public static final RegistryObject<Item> MEMOITE_BOW = ITEMS.register("memoite_bow", () -> new BowItem(new Item.Properties().durability(500)));
 
     public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc", () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).stacksTo(1)));
+
+    public static final RegistryObject<Item> SPINACH_SEED = ITEMS.register("spinach_seed", () ->
+            new ItemNameBlockItem(ModBlocks.SPINACH_CROP.get(), new Item.Properties()));
 
 
 

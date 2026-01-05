@@ -116,6 +116,7 @@ public class TutorialMod
             event.accept(ModItems.MEMOITE_HORSE_ARMOR.get());
             event.accept(ModItems.INSANESCANNER_SMITHING_TEMPLATE);
             event.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
+            event.accept(ModItems.SPINACH_SEED.get());
         }
 
     }

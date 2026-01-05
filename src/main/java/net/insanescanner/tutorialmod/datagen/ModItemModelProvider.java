@@ -95,6 +95,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.MEMOITE_BOOTS);
 
         basicItem(ModItems.INSANESCANNER_SMITHING_TEMPLATE.get());
+
+        basicItem(ModItems.SPINACH_SEED.get());
+        basicItem(ModItems.SPINACH.get());
+
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {

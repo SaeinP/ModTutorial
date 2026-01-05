@@ -3,6 +3,7 @@ package net.insanescanner.tutorialmod.block;
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.block.custom.AlexandriteLampBlock;
 import net.insanescanner.tutorialmod.block.custom.MagicBlock;
+import net.insanescanner.tutorialmod.block.custom.SpinachCropBlock;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.minecraft.client.resources.model.Material;
@@ -138,6 +139,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALEXANDRITE_LAMP = registerBlock("alexandrite_lamp",
             () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of().strength(3f).lightLevel(state -> state.getValue(AlexandriteLampBlock.CLICKED) ? 15 : 0))
     );
+
+    public static final RegistryObject<Block> SPINACH_CROP = BLOCKS.register("spinach_crop", () ->
+            new SpinachCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
 
 
