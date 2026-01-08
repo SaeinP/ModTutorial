@@ -100,5 +100,8 @@
 
   "item.tutorialmod.spinach_seed": "Spinach Seed",
   "item.tutorialmod.spinach": "Spinach",
-  "block.tutorialmod.spinach_crop": "Spinach Crop"
+  "block.tutorialmod.spinach_crop": "Spinach Crop",
+
+  "item.tutorialmod.blueberries": "Blueberries",
+  "block.tutorialmod.blueberry_bush": "Blueberry Bush"
 }

@@ -1,10 +1,11 @@
-// 1.21	2026-01-01T23:27:15.3461848	Item Models: tutorialmod
+// 1.21	2026-01-08T03:29:39.9779089	Item Models: tutorialmod
 9c36309b9b22da0f2a38fda68096fcc3013c449b assets/tutorialmod/models/item/alexandrite.json
 9a4cf3b4fc3a6a6372ea70a3a5572d2c6c3ca1aa assets/tutorialmod/models/item/alexandrite_button.json
 4eba9df595e1c7ced9cd8c0f8f698096a01ce673 assets/tutorialmod/models/item/alexandrite_door.json
 11dfa7af9b5aa4f86ae1094d2cb8d78a81abef0e assets/tutorialmod/models/item/alexandrite_fence.json
 b9a62ed3fc1c7a5a754d17fb335771f6cfa7112d assets/tutorialmod/models/item/alexandrite_wall.json
 f746b64540daf2ab6302b3ec01a78490c48fc10b assets/tutorialmod/models/item/bar_brawl_music_disc.json
+098ba9ef3897352b35c79cce38d0f7a3efcb4496 assets/tutorialmod/models/item/blueberries.json
 a6cbf7d9a9f6bba6247146c14978a902ef1546e3 assets/tutorialmod/models/item/cut_emerald.json
 fa892c267c5f209b0b189c4e54a37055944d8757 assets/tutorialmod/models/item/cut_sapphire.json
 e7ef11889e80da4ec66c036161cd0fe4a31eedb2 assets/tutorialmod/models/item/emerald_ring.json
@@ -70,4 +71,6 @@ d24305376f58c1ef118279a5c8f5b087a07b1d47 assets/tutorialmod/models/item/raw_sapp
 0a16bffc527696b64e4304b7efccfda93e2b9422 assets/tutorialmod/models/item/sapphire.json
 bdd7e27f29a21c8d5715c2a429a0474ee023176a assets/tutorialmod/models/item/sapphire_apple.json
 d1a062d44326f747df8e687312172cd62a74360b assets/tutorialmod/models/item/sapphire_ring.json
+2244ed4b47ef61144c4a9123fbd35f6c168d6ae4 assets/tutorialmod/models/item/spinach.json
+fdf0e9c38af4c24a64b7ab143661d0a66e21375a assets/tutorialmod/models/item/spinach_seed.json
 19934dda036222b87af8550e77f3c98574834f59 assets/tutorialmod/models/item/wrath_remnant.json

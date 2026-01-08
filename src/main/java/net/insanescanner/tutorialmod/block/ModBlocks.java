@@ -2,11 +2,11 @@ package net.insanescanner.tutorialmod.block;
 
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.block.custom.AlexandriteLampBlock;
+import net.insanescanner.tutorialmod.block.custom.BlueberryBushBlock;
 import net.insanescanner.tutorialmod.block.custom.MagicBlock;
 import net.insanescanner.tutorialmod.block.custom.SpinachCropBlock;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
-import net.minecraft.client.resources.model.Material;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -14,8 +14,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.minecraft.world.level.levelgen.material.MaterialRuleList;
-import net.minecraftforge.client.model.obj.ObjMaterialLibrary;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -142,6 +140,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SPINACH_CROP = BLOCKS.register("spinach_crop", () ->
             new SpinachCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> BLUEBERRY_BUSH = BLOCKS.register("blueberry_bush", () ->
+            new BlueberryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
 
 

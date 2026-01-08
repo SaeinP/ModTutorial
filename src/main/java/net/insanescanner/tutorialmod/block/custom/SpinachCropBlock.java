@@ -12,6 +12,8 @@ public class SpinachCropBlock extends CropBlock {
     public static final int MAX_AGE = 6;
     public static final IntegerProperty AGE = IntegerProperty.create("age", 0 , 6);
 
+
+
     public SpinachCropBlock(Properties properties) {
         super(properties);
     }
@@ -35,4 +37,6 @@ public class SpinachCropBlock extends CropBlock {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(AGE);
     }
+
+
 }

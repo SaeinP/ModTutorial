@@ -14,4 +14,10 @@ public class ModFoodProperties {
             effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 4000, 3), 1.0f).
             effect(new MobEffectInstance(MobEffects.ABSORPTION, 2000, 4), 1.0f).build();
 
+    public static final FoodProperties SPINACH = new FoodProperties.Builder().nutrition(2).
+            saturationModifier(0.25f).build();
+
+    public static final FoodProperties BLUEBERRIES = new FoodProperties.Builder().nutrition(4).
+            saturationModifier(0.25f).build();
+
 }

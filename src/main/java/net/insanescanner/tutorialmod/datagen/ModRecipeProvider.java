@@ -215,25 +215,25 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CUT_EMERALD.get(), 1)
                 .requires(Items.EMERALD)
                 .requires(ModTags.Items.SWORDS_ABOVE_STONE)
-                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD));
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD)).save(pRecipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CUT_SAPPHIRE.get(), 1)
                 .requires(ModItems.SAPPHIRE.get())
                 .requires(ModTags.Items.SWORDS_ABOVE_STONE)
-                .unlockedBy(getHasName(ModItems.RAW_SAPPHIRE.get()), has(ModItems.RAW_SAPPHIRE.get()));
+                .unlockedBy(getHasName(ModItems.RAW_SAPPHIRE.get()), has(ModItems.RAW_SAPPHIRE.get())).save(pRecipeOutput);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)
                 .requires(ModBlocks.ALEXANDRITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get()));
+                .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get())).save(pRecipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ALEXANDRITE.get(), 9)
                 .requires(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.RAW_ALEXANDRITE_BLOCK.get()), has(ModBlocks.RAW_ALEXANDRITE_BLOCK.get()));
+                .unlockedBy(getHasName(ModBlocks.RAW_ALEXANDRITE_BLOCK.get()), has(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())).save(pRecipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 9)
                 .requires(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get()), has(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get()));
+                .unlockedBy(getHasName(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get()), has(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get())).save(pRecipeOutput);
 
         List<ItemLike> ALEXANDRITE_SMELTABLE = List.of(ModItems.RAW_ALEXANDRITE.get(), ModBlocks.ALEXANDRITE_ORE.get(),
                 ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());

@@ -99,6 +99,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SPINACH_SEED.get());
         basicItem(ModItems.SPINACH.get());
 
+        basicItem(ModItems.BLUEBERRIES.get());
+
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {

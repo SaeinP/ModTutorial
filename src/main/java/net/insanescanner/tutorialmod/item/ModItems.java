@@ -74,7 +74,10 @@ public class ModItems {
                     .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true).rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> SPINACH =
-            ITEMS.register("spinach", () -> new Item(new Item.Properties().food(Foods.BEETROOT).rarity(Rarity.COMMON)));
+            ITEMS.register("spinach", () -> new Item(new Item.Properties().food(ModFoodProperties.SPINACH).rarity(Rarity.COMMON)));
+
+    public static final RegistryObject<Item> BLUEBERRIES =
+            ITEMS.register("blueberries", () -> new ItemNameBlockItem(ModBlocks.BLUEBERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.BLUEBERRIES).rarity(Rarity.COMMON)));
 
     public static final RegistryObject<Item> WRATH_REMNANT = ITEMS.register("wrath_remnant", () -> new WrathRemnantItem(new Item.Properties(), 1500));
 

@@ -13,6 +13,7 @@ import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.insanescanner.tutorialmod.util.ModItemProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -66,7 +67,10 @@ public class TutorialMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.SPINACH.get(), 0.4f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.SPINACH_SEED.get(), 0.25f);
+        });
     }
 
     // Add the example block item to the building blocks tab
@@ -82,6 +86,8 @@ public class TutorialMod
             event.accept(ModItems.SAPPHIRE_APPLE);
             event.accept(ModItems.ENCHANTED_SAPPHIRE_APPLE);
             event.accept(ModItems.WRATH_REMNANT);
+            event.accept(ModItems.SPINACH);
+            event.accept(ModItems.BLUEBERRIES.get());
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK);

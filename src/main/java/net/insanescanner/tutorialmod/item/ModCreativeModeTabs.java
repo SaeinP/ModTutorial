@@ -52,6 +52,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.INSANESCANNER_SMITHING_TEMPLATE.get());
 
                         output.accept(ModItems.SPINACH_SEED.get());
+                        output.accept(ModItems.SPINACH.get());
+
+                        output.accept(ModItems.BLUEBERRIES.get());
                     }).build());
 
 

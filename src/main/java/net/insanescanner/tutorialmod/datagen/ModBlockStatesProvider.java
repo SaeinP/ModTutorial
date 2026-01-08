@@ -3,13 +3,11 @@ package net.insanescanner.tutorialmod.datagen;
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.block.ModBlocks;
 import net.insanescanner.tutorialmod.block.custom.AlexandriteLampBlock;
+import net.insanescanner.tutorialmod.block.custom.BlueberryBushBlock;
 import net.insanescanner.tutorialmod.block.custom.SpinachCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CropBlock;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
@@ -86,6 +84,22 @@ public class ModBlockStatesProvider extends BlockStateProvider {
 
         makeCrop((CropBlock) ModBlocks.SPINACH_CROP.get(), "spinach_crop_stage", "spinach_crop_stage");
 
+        makeBush((SweetBerryBushBlock) ModBlocks.BLUEBERRY_BUSH.get(), "blueberry_bush_stage", "blueberry_bush_stage");
+
+    }
+
+    public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] states(BlockState state, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().cross(modelName + state.getValue(BlueberryBushBlock.AGE),
+                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "block/" + textureName + state.getValue(BlueberryBushBlock.AGE))).renderType("cutout"));
+
+        return models;
     }
 
     public void makeCrop(CropBlock block, String modelName, String textureName) {
