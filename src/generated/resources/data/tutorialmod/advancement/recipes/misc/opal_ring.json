@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_alexandrite": {
+    "has_opal": {
       "conditions": {
         "items": [
           {
-            "items": "tutorialmod:alexandrite"
+            "items": "tutorialmod:opal"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_alexandrite"
+      "has_opal"
     ]
   ],
   "rewards": {

@@ -26,6 +26,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_SAPPHIRE.get());
                         output.accept(ModItems.SAPPHIRE.get());
                         output.accept(ModItems.CUT_SAPPHIRE.get());
+                        output.accept(ModItems.RAW_OPAL.get());
+                        output.accept(ModItems.OPAL.get());
+                        output.accept(ModItems.RUBY.get());
                         output.accept(ModItems.SAPPHIRE_APPLE.get());
                         output.accept(ModItems.ENCHANTED_SAPPHIRE_APPLE.get());
                         output.accept(ModItems.MAGIC_CHISEL.get());

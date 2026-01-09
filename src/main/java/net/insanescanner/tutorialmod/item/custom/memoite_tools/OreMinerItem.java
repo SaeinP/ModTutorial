@@ -80,7 +80,9 @@ public class OreMinerItem extends PickaxeItem {
                 || world.getBlockState(pos).is(ModBlocks.MEMOITE_ORE.get())
                 || world.getBlockState(pos).is(ModBlocks.MEMOITE_DEEPSLATE_ORE.get())
                 || world.getBlockState(pos).is(ModBlocks.SAPPHIRE_ORE.get())
-                || world.getBlockState(pos).is(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get());
+                || world.getBlockState(pos).is(ModBlocks.SAPPHIRE_DEEPSLATE_ORE.get())
+                || world.getBlockState(pos).is(ModBlocks.RUBY_NETHER_ORE.get())
+                || world.getBlockState(pos).is(ModBlocks.OPAL_END_ORE.get());
     }
 
     private static int getMaxAmntForOreMiner(OreMinerItem oreminer){

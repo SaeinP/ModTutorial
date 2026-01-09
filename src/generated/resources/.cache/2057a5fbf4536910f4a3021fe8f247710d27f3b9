@@ -1,4 +1,4 @@
-// 1.21	2026-01-08T03:29:39.9779089	Item Models: tutorialmod
+// 1.21	2026-01-09T05:42:40.7485364	Item Models: tutorialmod
 9c36309b9b22da0f2a38fda68096fcc3013c449b assets/tutorialmod/models/item/alexandrite.json
 9a4cf3b4fc3a6a6372ea70a3a5572d2c6c3ca1aa assets/tutorialmod/models/item/alexandrite_button.json
 4eba9df595e1c7ced9cd8c0f8f698096a01ce673 assets/tutorialmod/models/item/alexandrite_door.json
@@ -64,10 +64,13 @@ a74492278f8d281305d702bfb7e7a4afaeacc436 assets/tutorialmod/models/item/memoite_
 1e161fd90461d67edf5c340fe4f40bdf4641537e assets/tutorialmod/models/item/memoite_pickaxe.json
 a45a221eb10e5168fcd10e9ff44c6d2fa516f1b9 assets/tutorialmod/models/item/memoite_shovel.json
 6b1b8a578ada86af1e25d81b22a08a5a1b1be56d assets/tutorialmod/models/item/memoite_sword.json
+45d52059aff68f2dcf1fad6276819c86ed5bd6fd assets/tutorialmod/models/item/opal.json
 008e0c64beb1a54d38a4e48491944cd4285257b1 assets/tutorialmod/models/item/opal_ring.json
 618bcb87cb7acab7c54afbe2ed857af447c05872 assets/tutorialmod/models/item/raw_alexandrite.json
 22b1b2289664a72b3a3e318328700828bdc54944 assets/tutorialmod/models/item/raw_memoite.json
+96c3ac13374b3a59adfbbee5c1b600ce61268c4d assets/tutorialmod/models/item/raw_opal.json
 d24305376f58c1ef118279a5c8f5b087a07b1d47 assets/tutorialmod/models/item/raw_sapphire.json
+d07fad06b4e5a92363d8d18e034dbd6a8641d34d assets/tutorialmod/models/item/ruby.json
 0a16bffc527696b64e4304b7efccfda93e2b9422 assets/tutorialmod/models/item/sapphire.json
 bdd7e27f29a21c8d5715c2a429a0474ee023176a assets/tutorialmod/models/item/sapphire_apple.json
 d1a062d44326f747df8e687312172cd62a74360b assets/tutorialmod/models/item/sapphire_ring.json

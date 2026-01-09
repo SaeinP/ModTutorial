@@ -1,4 +1,4 @@
-// 1.21	2026-01-08T03:29:39.9769093	Loot Tables
+// 1.21	2026-01-09T05:42:40.744527	Loot Tables
 082d4a4dfab54d4b7c02bf12577180f310c2d578 data/tutorialmod/loot_table/blocks/alexandrite_block.json
 46e710e38ef1ab93beb058251930a04c2cbddd5f data/tutorialmod/loot_table/blocks/alexandrite_button.json
 3f6e0e4c59bd7a0f12b556de63471be262db4aef data/tutorialmod/loot_table/blocks/alexandrite_deepslate_ore.json
@@ -16,10 +16,12 @@ ee93b2bc9ee8a805342093a207dff9ae5c04a6ab data/tutorialmod/loot_table/blocks/alex
 71fa0af238e765f166c124635ff9b1181312209f data/tutorialmod/loot_table/blocks/magic_block.json
 a7d3f4f3ec30335220a5bc1d4225b751d4ee0d54 data/tutorialmod/loot_table/blocks/memoite_deepslate_ore.json
 f1495c8b3c176731cc5212b2b79f1275f96b7bd0 data/tutorialmod/loot_table/blocks/memoite_ore.json
+9462d5cf47888ec2ba8b177ed18c6aa7bafffa1c data/tutorialmod/loot_table/blocks/opal_end_ore.json
 b0553e78b786b10d1cae40a75b03e5eb2f0e9a42 data/tutorialmod/loot_table/blocks/polished_sapphire_block.json
 d3807890b80f237e560dc228b67ebcd4475b6ac5 data/tutorialmod/loot_table/blocks/polished_sapphire_slab.json
 1b456c06911d92ae44d5f696d1476f82995385bb data/tutorialmod/loot_table/blocks/polished_sapphire_stair.json
 b019cac2fb4f4c4c0aca6b3a0ae079a8e6d74f56 data/tutorialmod/loot_table/blocks/raw_alexandrite_block.json
+0f24ee784c0ae94349dd1611bb06960e85f1b4b9 data/tutorialmod/loot_table/blocks/ruby_nether_ore.json
 7107d0de4bbff839e12d1f03f9a06dc14c5dd287 data/tutorialmod/loot_table/blocks/sapphire_deepslate_ore.json
 8f08c6689836e2cc7f89f1583cc944a4df84f07a data/tutorialmod/loot_table/blocks/sapphire_ore.json
 c666b42b5af1844972b5ae0a966303c9c0c1c144 data/tutorialmod/loot_table/blocks/spinach_crop.json

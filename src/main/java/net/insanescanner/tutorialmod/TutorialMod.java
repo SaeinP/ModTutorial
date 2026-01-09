@@ -82,7 +82,12 @@ public class TutorialMod
             event.accept(ModItems.RAW_SAPPHIRE);
             event.accept(ModItems.SAPPHIRE);
             event.accept(ModItems.CUT_SAPPHIRE);
+            event.accept(ModItems.RAW_MEMOITE);
+            event.accept(ModItems.MEMOITE);
+            event.accept(ModItems.RAW_OPAL);
+            event.accept(ModItems.OPAL);
             event.accept(ModItems.CUT_EMERALD);
+
             event.accept(ModItems.SAPPHIRE_APPLE);
             event.accept(ModItems.ENCHANTED_SAPPHIRE_APPLE);
             event.accept(ModItems.WRATH_REMNANT);

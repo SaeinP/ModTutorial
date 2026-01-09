@@ -30,6 +30,10 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.RAW_ALEXANDRITE_BLOCK);
 
+        blockWithItem(ModBlocks.OPAL_END_ORE);
+
+        blockWithItem(ModBlocks.RUBY_NETHER_ORE);
+
         blockWithItem(ModBlocks.MEMOITE_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.MEMOITE_ORE);
 

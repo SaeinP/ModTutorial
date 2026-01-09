@@ -91,6 +91,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.SAPPHIRE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.SAPPHIRE.get(), 1, 1));
 
+        this.add(ModBlocks.OPAL_END_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.OPAL_END_ORE.get(), ModItems.RAW_OPAL.get(), 1, 1));
+
+        this.add(ModBlocks.RUBY_NETHER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.RUBY_NETHER_ORE.get(), ModItems.RUBY.get(), 1, 1));
+
         LootItemCondition.Builder lootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.SPINACH_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SpinachCropBlock.AGE, SpinachCropBlock.MAX_AGE));
 

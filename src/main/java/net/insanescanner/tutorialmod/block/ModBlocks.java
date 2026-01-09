@@ -65,6 +65,14 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(4,6),BlockBehaviour.Properties.of().strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final RegistryObject<Block> OPAL_END_ORE = registerBlock("opal_end_ore",
+            () -> new DropExperienceBlock(UniformInt.of(4,6),BlockBehaviour.Properties.of().strength(3f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> RUBY_NETHER_ORE = registerBlock("ruby_nether_ore",
+            () -> new DropExperienceBlock(UniformInt.of(4,6),BlockBehaviour.Properties.of().strength(3f)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
     public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f)
                     .requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));

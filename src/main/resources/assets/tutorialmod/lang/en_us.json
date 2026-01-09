@@ -7,6 +7,8 @@
   "item.tutorialmod.cut_emerald": "Cut Emerald",
   "item.tutorialmod.raw_memoite": "Raw Memoite",
   "item.tutorialmod.memoite": "Memoite",
+  "item.tutorialmod.raw_opal": "Raw Opal",
+  "item.tutorialmod.opal": "Opal",
 
   "item.tutorialmod.wrath_remnant": "Remnant of Wrath",
 
@@ -53,6 +55,7 @@
   "block.tutorialmod.sapphire_deepslate_ore": "Sapphire Deepslate Ore",
   "block.tutorialmod.memoite_ore": "Memoite Ore",
   "block.tutorialmod.memoite_deepslate_ore": "Memoite Deepslate Ore",
+  "block.tutorialmod.opal_end_ore": "Opal End Ore",
 
   "block.tutorialmod.alexandrite_stairs": "Alexandrite Stairs",
   "block.tutorialmod.alexandrite_slab": "Alexandrite Slab",

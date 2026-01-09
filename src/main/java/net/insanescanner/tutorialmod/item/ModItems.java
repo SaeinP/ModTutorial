@@ -48,6 +48,15 @@ public class ModItems {
     public static final RegistryObject<Item> MEMOITE = ITEMS.register("memoite",
             () -> new MemoiteItem(new Item.Properties()));
 
+    public static final RegistryObject<Item> RAW_OPAL = ITEMS.register("raw_opal",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> OPAL = ITEMS.register("opal",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> CUT_EMERALD = ITEMS.register("cut_emerald",
             () -> new Item(new Item.Properties()));
 

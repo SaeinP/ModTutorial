@@ -201,8 +201,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("A A")
                 .pattern(" A ")
                 .define('A', Items.GOLD_INGOT)
-                .define('B', ModItems.ALEXANDRITE.get())
-                .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+                .define('B', ModItems.OPAL.get())
+                .unlockedBy(getHasName(ModItems.OPAL.get()), has(ModItems.OPAL.get())).save(pRecipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_LAMP.get())
                 .pattern("AAA")
@@ -240,6 +240,11 @@ public class ModRecipeProvider extends RecipeProvider {
 
         oreSmelting(pRecipeOutput, ALEXANDRITE_SMELTABLE, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.5f, 200, "alexandrite");
         oreBlasting(pRecipeOutput, ALEXANDRITE_SMELTABLE, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.5f, 100, "alexandrite");
+
+        List<ItemLike> OPAL_SMELTABLE = List.of(ModItems.RAW_OPAL.get(), ModBlocks.OPAL_END_ORE.get());
+
+        oreSmelting(pRecipeOutput, OPAL_SMELTABLE, RecipeCategory.MISC, ModItems.OPAL.get(), 0.5f, 200, "opal");
+        oreBlasting(pRecipeOutput, OPAL_SMELTABLE, RecipeCategory.MISC, ModItems.OPAL.get(), 0.5f, 100, "opal");
 
         List<ItemLike> MEMOITE_SMELTABLE = List.of(ModItems.RAW_MEMOITE.get(), ModBlocks.MEMOITE_ORE.get(),
                 ModBlocks.MEMOITE_DEEPSLATE_ORE.get());

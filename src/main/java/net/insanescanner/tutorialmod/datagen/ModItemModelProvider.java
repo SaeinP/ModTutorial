@@ -67,6 +67,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CUT_SAPPHIRE.get());
         basicItem(ModItems.SAPPHIRE_RING.get());
 
+        basicItem(ModItems.RAW_OPAL.get());
+        basicItem(ModItems.OPAL.get());
+        basicItem(ModItems.OPAL_RING.get());
+
+        basicItem(ModItems.RUBY.get());
+
         basicItem(ModItems.CUT_EMERALD.get());
         basicItem(ModItems.EMERALD_RING.get());
 

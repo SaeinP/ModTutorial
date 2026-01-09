@@ -24,6 +24,8 @@
     "tutorialmod:alexandrite_door",
     "tutorialmod:alexandrite_trapdoor",
     "tutorialmod:memoite_deepslate_ore",
-    "tutorialmod:memoite_ore"
+    "tutorialmod:memoite_ore",
+    "tutorialmod:ruby_nether_ore",
+    "tutorialmod:opal_end_ore"
   ]
 }

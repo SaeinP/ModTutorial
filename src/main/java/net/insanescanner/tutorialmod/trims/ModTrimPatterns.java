@@ -24,6 +24,8 @@ public class ModTrimPatterns {
     public static final ResourceKey<TrimPattern> INSANESCANNER = ResourceKey.create(Registries.TRIM_PATTERN,
             ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "insanescanner"));
 
+
+    //registers stuff and im guessing also only runs when we run data hence why when i comment it out it still technically runs until the next data gen.
     public static void bootstrap(BootstrapContext<TrimPattern> context) {
         register(context, ModItems.INSANESCANNER_SMITHING_TEMPLATE.get(), INSANESCANNER);
     }

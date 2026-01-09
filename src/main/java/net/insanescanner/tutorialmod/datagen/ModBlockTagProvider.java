@@ -45,7 +45,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_DOOR.get())
                 .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get())
                 .add(ModBlocks.MEMOITE_DEEPSLATE_ORE.get())
-                .add(ModBlocks.MEMOITE_ORE.get());
+                .add(ModBlocks.MEMOITE_ORE.get())
+                .add(ModBlocks.RUBY_NETHER_ORE.get())
+                .add(ModBlocks.OPAL_END_ORE.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL).add(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
@@ -70,7 +72,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.UNPOLISHED_SAPPHIRE_SLAB.get())
                 .add(ModBlocks.POLISHED_SAPPHIRE_SLAB.get())
                 .add(ModBlocks.MEMOITE_DEEPSLATE_ORE.get())
-                .add(ModBlocks.MEMOITE_ORE.get());;
+                .add(ModBlocks.MEMOITE_ORE.get())
+                .add(ModBlocks.RUBY_NETHER_ORE.get())
+                .add(ModBlocks.OPAL_END_ORE.get());
 
         tag(BlockTags.NEEDS_STONE_TOOL).add(ModBlocks.MAGIC_BLOCK.get());
 
