@@ -106,6 +106,12 @@ public class TutorialMod
             event.accept(ModBlocks.MEMOITE_DEEPSLATE_ORE.get());
             event.accept(ModBlocks.MAGIC_BLOCK.get());
 
+            event.accept(ModBlocks.MAHOGANY_LOG);
+            event.accept(ModBlocks.MAHOGANY_WOOD);
+            event.accept(ModBlocks.STRIPPED_MAHOGANY_LOG);
+            event.accept(ModBlocks.STRIPPED_MAHOGANY_WOOD);
+            event.accept(ModBlocks.MAHOGANY_PLANKS);
+
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
@@ -128,6 +134,7 @@ public class TutorialMod
             event.accept(ModItems.INSANESCANNER_SMITHING_TEMPLATE);
             event.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
             event.accept(ModItems.SPINACH_SEED.get());
+            event.accept(ModBlocks.MAHOGANY_SAPLING);
         }
 
     }

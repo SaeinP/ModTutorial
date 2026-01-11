@@ -90,6 +90,36 @@ public class ModBlockStatesProvider extends BlockStateProvider {
 
         makeBush((SweetBerryBushBlock) ModBlocks.BLUEBERRY_BUSH.get(), "blueberry_bush_stage", "blueberry_bush_stage");
 
+        logBlock(ModBlocks.MAHOGANY_LOG.get());
+        axisBlock(ModBlocks.MAHOGANY_WOOD.get(), blockTexture(ModBlocks.MAHOGANY_LOG.get()), blockTexture(ModBlocks.MAHOGANY_LOG.get()));
+
+
+        logBlock(ModBlocks.STRIPPED_MAHOGANY_LOG.get());
+        axisBlock(ModBlocks.STRIPPED_MAHOGANY_WOOD.get(), blockTexture(ModBlocks.STRIPPED_MAHOGANY_LOG.get()), blockTexture(ModBlocks.STRIPPED_MAHOGANY_LOG.get()));
+
+
+        blockItem(ModBlocks.MAHOGANY_LOG);
+        blockItem(ModBlocks.MAHOGANY_WOOD);
+        blockItem(ModBlocks.STRIPPED_MAHOGANY_LOG);
+        blockItem(ModBlocks.STRIPPED_MAHOGANY_WOOD);
+
+        blockWithItem(ModBlocks.MAHOGANY_PLANKS);
+
+        leavesBlock(ModBlocks.MAHOGANY_LEAVES);
+        leavesBlock(ModBlocks.FLOWERING_MAHOGANY_LEAVES);
+        saplingBlock(ModBlocks.MAHOGANY_SAPLING);
+
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void makeBush(SweetBerryBushBlock block, String modelName, String textureName) {

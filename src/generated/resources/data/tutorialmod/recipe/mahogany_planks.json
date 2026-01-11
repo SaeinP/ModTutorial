@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "tutorialmod:turns_into_mahogany_plank"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "tutorialmod:mahogany_planks"
+  }
+}

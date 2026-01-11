@@ -1,4 +1,4 @@
-// 1.21	2026-01-09T05:42:40.7485364	Item Models: tutorialmod
+// 1.21	2026-01-11T05:53:25.9428986	Item Models: tutorialmod
 9c36309b9b22da0f2a38fda68096fcc3013c449b assets/tutorialmod/models/item/alexandrite.json
 9a4cf3b4fc3a6a6372ea70a3a5572d2c6c3ca1aa assets/tutorialmod/models/item/alexandrite_button.json
 4eba9df595e1c7ced9cd8c0f8f698096a01ce673 assets/tutorialmod/models/item/alexandrite_door.json
@@ -11,6 +11,7 @@ fa892c267c5f209b0b189c4e54a37055944d8757 assets/tutorialmod/models/item/cut_sapp
 e7ef11889e80da4ec66c036161cd0fe4a31eedb2 assets/tutorialmod/models/item/emerald_ring.json
 1509b12499fff0602eace813010f52ca1f7d1817 assets/tutorialmod/models/item/enchanted_sapphire_apple.json
 0152e385fb56b218c3264debb7301ab553033c7d assets/tutorialmod/models/item/insanescanner_armor_trim_smithing_template.json
+b7bee40bc480c416d12aa65a4dc469dbf72aa5ce assets/tutorialmod/models/item/mahogany_sapling.json
 174c94d5484e97413c01f35a7ad539b551c4e810 assets/tutorialmod/models/item/memoite.json
 9ba1650f9c4e8257ae120405806f4cb52eb538e8 assets/tutorialmod/models/item/memoite_axe.json
 e687e5a25f7dbc0e09765843722b0d85e1476566 assets/tutorialmod/models/item/memoite_boots.json

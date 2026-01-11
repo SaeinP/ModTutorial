@@ -235,6 +235,10 @@ public class ModRecipeProvider extends RecipeProvider {
                 .requires(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get()), has(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get())).save(pRecipeOutput);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.MAHOGANY_PLANKS.get(), 4)
+                .requires(ModTags.Items.TURNS_INTO_MAHOGANY_PLANK)
+                .unlockedBy(getHasName(ModBlocks.MAHOGANY_LOG.get()), has(ModBlocks.MAHOGANY_LOG.get())).save(pRecipeOutput);
+
         List<ItemLike> ALEXANDRITE_SMELTABLE = List.of(ModItems.RAW_ALEXANDRITE.get(), ModBlocks.ALEXANDRITE_ORE.get(),
                 ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
 

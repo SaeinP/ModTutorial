@@ -42,5 +42,22 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.SWORD_ENCHANTABLE).addTags(ModTags.Items.MEMOITE_WEAPONS);
 
         tag(ItemTags.WEAPON_ENCHANTABLE).addTags(ModTags.Items.MEMOITE_WEAPONS);
+
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAHOGANY_LOG.get().asItem())
+                .add(ModBlocks.MAHOGANY_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_MAHOGANY_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_MAHOGANY_WOOD.get().asItem());
+
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.MAHOGANY_PLANKS.get().asItem());
+
+        tag(ModTags.Items.TURNS_INTO_MAHOGANY_PLANK)
+                .add(ModBlocks.MAHOGANY_LOG.get().asItem())
+                .add(ModBlocks.MAHOGANY_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_MAHOGANY_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_MAHOGANY_WOOD.get().asItem());
+
+
     }
 }

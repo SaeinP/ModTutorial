@@ -106,5 +106,13 @@
   "block.tutorialmod.spinach_crop": "Spinach Crop",
 
   "item.tutorialmod.blueberries": "Blueberries",
-  "block.tutorialmod.blueberry_bush": "Blueberry Bush"
+  "block.tutorialmod.blueberry_bush": "Blueberry Bush",
+
+  "block.tutorialmod.mahogany_log": "Mahogany Log",
+  "block.tutorialmod.mahogany_wood": "Mahogany Wood",
+  "block.tutorialmod.stripped_mahogany_log": "Stripped Mahogany Log",
+  "block.tutorialmod.stripped_mahogany_wood": "Stripped Mahogany Wood",
+  "block.tutorialmod.mahogany_planks": "Mahogany Plank",
+  "block.tutorialmod.mahogany_leaves": "Mahogany Leaves",
+  "block.tutorialmod.mahogany_sapling": "Mahogany Sapling"
 }

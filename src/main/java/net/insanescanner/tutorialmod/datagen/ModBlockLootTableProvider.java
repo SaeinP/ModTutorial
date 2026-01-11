@@ -64,6 +64,21 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.UNPOLISHED_SAPPHIRE_SLAB.get());
         dropSelf(ModBlocks.POLISHED_SAPPHIRE_SLAB.get());
 
+        dropSelf(ModBlocks.MAHOGANY_PLANKS.get());
+        dropSelf(ModBlocks.MAHOGANY_LOG.get());
+        dropSelf(ModBlocks.MAHOGANY_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_MAHOGANY_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
+        dropSelf(ModBlocks.MAHOGANY_SAPLING.get());
+
+        this.add(ModBlocks.MAHOGANY_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.MAHOGANY_SAPLING.get(),
+                        NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.add(ModBlocks.FLOWERING_MAHOGANY_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.MAHOGANY_SAPLING.get(),
+                        NORMAL_LEAVES_SAPLING_CHANCES));
+
         dropSelf(ModBlocks.ALEXANDRITE_LAMP.get());
 
         this.add(ModBlocks.ALEXANDRITE_DOOR.get(),

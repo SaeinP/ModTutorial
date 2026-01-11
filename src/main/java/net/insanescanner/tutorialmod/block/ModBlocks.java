@@ -1,17 +1,19 @@
 package net.insanescanner.tutorialmod.block;
 
 import net.insanescanner.tutorialmod.TutorialMod;
-import net.insanescanner.tutorialmod.block.custom.AlexandriteLampBlock;
-import net.insanescanner.tutorialmod.block.custom.BlueberryBushBlock;
-import net.insanescanner.tutorialmod.block.custom.MagicBlock;
-import net.insanescanner.tutorialmod.block.custom.SpinachCropBlock;
+import net.insanescanner.tutorialmod.block.custom.*;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
+import net.insanescanner.tutorialmod.worldgen.tree.ModTreeGrower;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -75,7 +77,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f)
-                    .requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
+                    .requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS).randomTicks()));
 
     public static final RegistryObject<StairBlock> UNPOLISHED_SAPPHIRE_STAIR = registerBlock("unpolished_sapphire_stair",
             () -> new StairBlock(ModBlocks.UNPOLISHED_SAPPHIRE_BLOCK.get().defaultBlockState(),
@@ -152,7 +154,72 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLUEBERRY_BUSH = BLOCKS.register("blueberry_bush", () ->
             new BlueberryBushBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SWEET_BERRY_BUSH)));
 
+    public static final RegistryObject<RotatedPillarBlock> MAHOGANY_LOG = registerBlock("mahogany_log", () ->
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> MAHOGANY_WOOD = registerBlock("mahogany_wood", () ->
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_MAHOGANY_LOG = registerBlock("stripped_mahogany_log", () ->
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<RotatedPillarBlock> STRIPPED_MAHOGANY_WOOD = registerBlock("stripped_mahogany_wood", () ->
+            new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
 
+    public static final RegistryObject<Block> MAHOGANY_PLANKS = registerBlock("mahogany_planks", () ->
+            new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+    public static final RegistryObject<Block> MAHOGANY_LEAVES = registerBlock("mahogany_leaves", () ->
+            new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            }
+    );
+
+    public static final RegistryObject<Block> FLOWERING_MAHOGANY_LEAVES = registerBlock("flowering_mahogany_leaves", () ->
+            new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)){
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            }
+    );
+
+    public static final RegistryObject<Block> MAHOGANY_SAPLING = registerBlock("mahogany_sapling", () ->
+            new SaplingBlock(ModTreeGrower.MAHOGANY, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

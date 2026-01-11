@@ -4,9 +4,11 @@ import net.insanescanner.tutorialmod.item.ModItems;
 import net.insanescanner.tutorialmod.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.ItemInteractionResult;
@@ -22,7 +24,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.AirBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.fml.common.Mod;
@@ -33,6 +37,7 @@ public class MagicBlock extends Block {
 
     public MagicBlock(Properties p_49795_) {
         super(p_49795_);
+
     }
 
     @Override
@@ -101,5 +106,13 @@ public class MagicBlock extends Block {
         return ItemInteractionResult.SUCCESS;
     }
 
+    @Override
+    protected void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
+
+        if(!pLevel.getBlockState(pPos.west()).isAir()) {
+            pLevel.setBlock(pPos.west(), pState, 3);
+        }
+        super.randomTick(pState, pLevel, pPos, pRandom);
+    }
 
 }

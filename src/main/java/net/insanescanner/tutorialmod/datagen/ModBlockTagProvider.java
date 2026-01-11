@@ -21,6 +21,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAHOGANY_LOG.get())
+                .add(ModBlocks.MAHOGANY_WOOD.get())
+                .add(ModBlocks.STRIPPED_MAHOGANY_LOG.get())
+                .add(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
+
+
+
+
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_ORE.get())

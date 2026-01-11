@@ -1,0 +1,19 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:beach",
+    "minecraft:ocean",
+    "minecraft:beach",
+    "minecraft:deep_cold_ocean",
+    "minecraft:frozen_ocean",
+    "minecraft:cold_ocean",
+    "minecraft:deep_ocean",
+    "minecraft:deep_frozen_ocean",
+    "minecraft:deep_lukewarm_ocean",
+    "minecraft:lukewarm_ocean",
+    "minecraft:warm_ocean",
+    "minecraft:river"
+  ],
+  "features": "tutorialmod:sapphire_ore_placed",
+  "step": "underground_ores"
+}

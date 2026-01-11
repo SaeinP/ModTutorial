@@ -8,6 +8,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
+import javax.swing.text.html.HTML;
+
 public class ModTags {
     public static class Blocks{
 
@@ -20,6 +22,8 @@ public class ModTags {
     }
 
     public static class Items{
+        public static final TagKey<Item> TURNS_INTO_MAHOGANY_PLANK = createTag("turns_into_mahogany_plank");
+
         public static final TagKey<Item> TRANSFORMABLE_TO_EMERALD = createTag("transformable_to_emerald");
 
         public static final TagKey<Item> SWORDS_ABOVE_STONE = createTag("swords_above_stone");

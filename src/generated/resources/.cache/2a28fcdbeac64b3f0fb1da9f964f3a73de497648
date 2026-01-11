@@ -1,6 +1,8 @@
-// 1.21	2026-01-03T03:01:00.3721839	Tags for minecraft:item mod id tutorialmod
+// 1.21	2026-01-11T06:11:32.2983675	Tags for minecraft:item mod id tutorialmod
 7c6992ef79f1036666f2de90ef23f10177b6eb62 data/minecraft/tags/item/enchantable/sword.json
 7c6992ef79f1036666f2de90ef23f10177b6eb62 data/minecraft/tags/item/enchantable/weapon.json
+43a916d3b41259ed2a7ccc7d89bc42e1780ccef1 data/minecraft/tags/item/logs_that_burn.json
+836780f50a1ae3cc5654aa215b627c33b5d3afd2 data/minecraft/tags/item/planks.json
 c75195f810ce5490fc8f346c29cb3dce45ed25da data/minecraft/tags/item/trimmable_armor.json
 c97e271327ce6114812327cb5f96b99f66e82937 data/minecraft/tags/item/trim_materials.json
 814546b361c6d6aba512b6f00f8fbbf48233fb2c data/minecraft/tags/item/trim_templates.json
@@ -8,3 +10,4 @@ c2a47ed57fe2681ed5f8d96b04d0daea31aa421b data/tutorialmod/tags/item/memoite_weap
 98e5788814ef4176ec95b127dde6e80709d65505 data/tutorialmod/tags/item/sapphire_blocks.json
 cd081d6f81e45037ec8b0c0c816d23c6a9e58418 data/tutorialmod/tags/item/swords_above_stone.json
 e3e1c196e0c1b3e567718b451c7e2b0736d9979a data/tutorialmod/tags/item/transformable_to_emerald.json
+43a916d3b41259ed2a7ccc7d89bc42e1780ccef1 data/tutorialmod/tags/item/turns_into_mahogany_plank.json

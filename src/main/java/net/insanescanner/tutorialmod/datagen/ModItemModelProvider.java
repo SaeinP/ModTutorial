@@ -107,6 +107,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.BLUEBERRIES.get());
 
+        saplingItem(ModBlocks.MAHOGANY_SAPLING);
+
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {

@@ -58,6 +58,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SPINACH.get());
 
                         output.accept(ModItems.BLUEBERRIES.get());
+
+                        output.accept(ModBlocks.MAHOGANY_LOG.get());
+                        output.accept(ModBlocks.MAHOGANY_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_MAHOGANY_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
+                        output.accept(ModBlocks.MAHOGANY_PLANKS.get());
                     }).build());
 
 
