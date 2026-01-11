@@ -1,9 +1,12 @@
 package net.insanescanner.tutorialmod.worldgen;
 
 import net.insanescanner.tutorialmod.TutorialMod;
+import net.insanescanner.tutorialmod.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -20,6 +23,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MEMOITE_ORE_PLACE_KEY = registerKey("memoite_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_RUBY_ORE_PLACE_KEY = registerKey("nether_ruby_ore_placed");
     public static final ResourceKey<PlacedFeature> END_OPAL_ORE_PLACE_KEY = registerKey("end_opal_ore_placed");
+
+    public static final ResourceKey<PlacedFeature> MAHOGANY_PLACED_KEY = registerKey("walnut_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -39,6 +44,11 @@ public class ModPlacedFeatures {
         register(context, END_OPAL_ORE_PLACE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_OPAL_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(5,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(70))));
+
+
+        register(context, MAHOGANY_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAHOGANY_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.MAHOGANY_SAPLING.get()));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

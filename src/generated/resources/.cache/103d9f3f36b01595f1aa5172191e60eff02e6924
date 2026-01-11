@@ -1,6 +1,7 @@
-// 1.21	2026-01-11T05:53:25.941394	Registries
+// 1.21	2026-01-11T06:51:06.4701721	Registries
 f8fc89db04b1bb78edcee8546fdcb549ad3a97f2 data/tutorialmod/enchantment/lightning_striker.json
 21ed363719de45bdf5ab7cd4cd38b5d61adfe289 data/tutorialmod/forge/biome_modifier/add_end_opal_ore.json
+5a66b8fd5538674032a7b9a1d31b170d70163a77 data/tutorialmod/forge/biome_modifier/add_mahogany_tree.json
 b0187b79c0774e35477a8f8fc489da83bcde2129 data/tutorialmod/forge/biome_modifier/add_memoite_ore.json
 d775b8e8836bdc68588f3eb0a90f96b484c121dd data/tutorialmod/forge/biome_modifier/add_nether_ruby_ore.json
 708adb7c853511ee828c3c7ff067fd8d5a0c04b1 data/tutorialmod/forge/biome_modifier/add_sapphire_ore.json
@@ -15,3 +16,4 @@ c799950aea95a698aee4e3e3ecc4d4fa4c81554b data/tutorialmod/worldgen/placed_featur
 97c12ac4f5a82662574189dc1dbb1602df346312 data/tutorialmod/worldgen/placed_feature/memoite_ore_placed.json
 df042fae0f2c105e2de6ec1f268e60ec9895b2cb data/tutorialmod/worldgen/placed_feature/nether_ruby_ore_placed.json
 768cab6fb4bda3a4a050686aa93e60c5d2f23385 data/tutorialmod/worldgen/placed_feature/sapphire_ore_placed.json
+217dee8c9d9537dbf8b7d32b9a6694041b0974bf data/tutorialmod/worldgen/placed_feature/walnut_placed.json

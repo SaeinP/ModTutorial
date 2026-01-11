@@ -21,6 +21,9 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_NETHER_RUBY_ORE = registerKey("add_nether_ruby_ore");
     public static final ResourceKey<BiomeModifier> ADD_END_OPAL_ORE = registerKey("add_end_opal_ore");
 
+    public static final ResourceKey<BiomeModifier> ADD_MAHOGANY_TREE = registerKey("add_mahogany_tree");
+
+
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -55,6 +58,11 @@ public class ModBiomeModifiers {
         context.register(ADD_END_OPAL_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.END_OPAL_ORE_PLACE_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+
+        context.register(ADD_MAHOGANY_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.SAVANNA)), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.MAHOGANY_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
         ));
 
     }
