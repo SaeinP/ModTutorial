@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:meadow",
+  "features": "tutorialmod:rare_blueberry_bush_placed",
+  "step": "vegetal_decoration"
+}

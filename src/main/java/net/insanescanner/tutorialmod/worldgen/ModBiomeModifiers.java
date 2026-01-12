@@ -23,6 +23,9 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> ADD_MAHOGANY_TREE = registerKey("add_mahogany_tree");
 
+    public static final ResourceKey<BiomeModifier> ADD_COMMON_BLUEBERRY_BUSH = registerKey("add_common_blueberry_bush");
+    public static final ResourceKey<BiomeModifier> ADD_UNCOMMON_BLUEBERRY_BUSH = registerKey("add_uncommon_blueberry_bush");
+    public static final ResourceKey<BiomeModifier> ADD_RARE_BLUEBERRY_BUSH = registerKey("add_rare_blueberry_bush");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
@@ -62,6 +65,21 @@ public class ModBiomeModifiers {
 
         context.register(ADD_MAHOGANY_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.SAVANNA)), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.MAHOGANY_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
+        context.register(ADD_COMMON_BLUEBERRY_BUSH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.TAIGA)), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.COMMON_BLUEBERRY_BUSH_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
+        context.register(ADD_UNCOMMON_BLUEBERRY_BUSH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.BIRCH_FOREST), biomes.getOrThrow(Biomes.FOREST)), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.UNCOMMON_BLUEBERRY_BUSH_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
+        context.register(ADD_RARE_BLUEBERRY_BUSH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.MEADOW)), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.RARE_BLUEBERRY_BUSH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
 

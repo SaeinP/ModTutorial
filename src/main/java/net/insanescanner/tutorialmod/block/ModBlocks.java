@@ -181,7 +181,7 @@ public class ModBlocks {
                 }
             });
     public static final RegistryObject<Block> MAHOGANY_LEAVES = registerBlock("mahogany_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)){
+            new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LEAVES)){
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
@@ -200,7 +200,7 @@ public class ModBlocks {
     );
 
     public static final RegistryObject<Block> FLOWERING_MAHOGANY_LEAVES = registerBlock("flowering_mahogany_leaves", () ->
-            new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)){
+            new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LEAVES)){
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
@@ -219,7 +219,7 @@ public class ModBlocks {
     );
 
     public static final RegistryObject<Block> MAHOGANY_SAPLING = registerBlock("mahogany_sapling", () ->
-            new SaplingBlock(ModTreeGrower.MAHOGANY, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            new ModSaplingBlock(ModTreeGrower.MAHOGANY, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING), () -> Blocks.DIRT));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

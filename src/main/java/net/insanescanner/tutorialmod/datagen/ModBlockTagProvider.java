@@ -27,7 +27,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_MAHOGANY_LOG.get())
                 .add(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
 
-
+        this.tag(BlockTags.LEAVES).add(ModBlocks.MAHOGANY_LEAVES.get())
+                        .add(ModBlocks.FLOWERING_MAHOGANY_LEAVES.get());
 
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.ALEXANDRITE_BLOCK.get())

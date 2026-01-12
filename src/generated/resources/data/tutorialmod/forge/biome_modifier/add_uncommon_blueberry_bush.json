@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:birch_forest",
+    "minecraft:forest"
+  ],
+  "features": "tutorialmod:uncommon_blueberry_bush_placed",
+  "step": "vegetal_decoration"
+}
