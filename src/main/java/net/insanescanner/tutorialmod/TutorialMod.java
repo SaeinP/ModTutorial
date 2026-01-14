@@ -5,13 +5,14 @@ import net.insanescanner.tutorialmod.block.ModBlocks;
 import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
 import net.insanescanner.tutorialmod.effects.ModEffects;
 import net.insanescanner.tutorialmod.enchantments.ModEnchantmentEffects;
-import net.insanescanner.tutorialmod.enchantments.ModEnchantments;
+import net.insanescanner.tutorialmod.entity.ModEntities;
+import net.insanescanner.tutorialmod.entity.client.watching_entity.WatchingEntityRenderer;
 import net.insanescanner.tutorialmod.item.ModCreativeModeTabs;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.insanescanner.tutorialmod.potion.ModPotions;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.insanescanner.tutorialmod.util.ModItemProperties;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -60,6 +61,7 @@ public class TutorialMod
         ModEnchantmentEffects.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        ModEntities.register(modEventBus);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -154,6 +156,8 @@ public class TutorialMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             ModItemProperties.addCustomProperties();
+
+            EntityRenderers.register(ModEntities.WATCHING_ENTITY.get(), WatchingEntityRenderer::new);
         }
     }
 }

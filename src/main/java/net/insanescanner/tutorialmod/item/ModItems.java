@@ -2,6 +2,7 @@ package net.insanescanner.tutorialmod.item;
 
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.block.ModBlocks;
+import net.insanescanner.tutorialmod.entity.ModEntities;
 import net.insanescanner.tutorialmod.item.custom.*;
 import net.insanescanner.tutorialmod.item.custom.memoite_tools.*;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
@@ -10,6 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -146,6 +148,9 @@ public class ModItems {
     public static final RegistryObject<Item> SPINACH_SEED = ITEMS.register("spinach_seed", () ->
             new ItemNameBlockItem(ModBlocks.SPINACH_CROP.get(), new Item.Properties()));
 
+
+    public static final RegistryObject<Item> WATCHING_ENTITY_SPAWN_EGG = ITEMS.register("watching_entity_spawn_egg", () ->
+            new ForgeSpawnEggItem(ModEntities.WATCHING_ENTITY, 0x000000, 0x2F2F2F, new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

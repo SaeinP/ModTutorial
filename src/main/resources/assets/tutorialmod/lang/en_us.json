@@ -114,5 +114,8 @@
   "block.tutorialmod.stripped_mahogany_wood": "Stripped Mahogany Wood",
   "block.tutorialmod.mahogany_planks": "Mahogany Plank",
   "block.tutorialmod.mahogany_leaves": "Mahogany Leaves",
-  "block.tutorialmod.mahogany_sapling": "Mahogany Sapling"
+  "block.tutorialmod.mahogany_sapling": "Mahogany Sapling",
+
+  "item.tutorialmod.watching_entity_spawn_egg": "Watcher Spawn Egg",
+  "entity.tutorialmod.watching_entity": "§kWatcher§r"
 }

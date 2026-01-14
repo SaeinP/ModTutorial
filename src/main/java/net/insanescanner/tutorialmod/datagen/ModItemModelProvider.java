@@ -109,6 +109,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         saplingItem(ModBlocks.MAHOGANY_SAPLING);
 
+        withExistingParent(ModItems.WATCHING_ENTITY_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

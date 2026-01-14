@@ -1,4 +1,4 @@
-// 1.21	2026-01-11T05:53:25.9428986	Item Models: tutorialmod
+// 1.21	2026-01-14T04:35:16.2673486	Item Models: tutorialmod
 9c36309b9b22da0f2a38fda68096fcc3013c449b assets/tutorialmod/models/item/alexandrite.json
 9a4cf3b4fc3a6a6372ea70a3a5572d2c6c3ca1aa assets/tutorialmod/models/item/alexandrite_button.json
 4eba9df595e1c7ced9cd8c0f8f698096a01ce673 assets/tutorialmod/models/item/alexandrite_door.json
@@ -77,4 +77,5 @@ bdd7e27f29a21c8d5715c2a429a0474ee023176a assets/tutorialmod/models/item/sapphire
 d1a062d44326f747df8e687312172cd62a74360b assets/tutorialmod/models/item/sapphire_ring.json
 2244ed4b47ef61144c4a9123fbd35f6c168d6ae4 assets/tutorialmod/models/item/spinach.json
 fdf0e9c38af4c24a64b7ab143661d0a66e21375a assets/tutorialmod/models/item/spinach_seed.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tutorialmod/models/item/watching_entity_spawn_egg.json
 19934dda036222b87af8550e77f3c98574834f59 assets/tutorialmod/models/item/wrath_remnant.json
