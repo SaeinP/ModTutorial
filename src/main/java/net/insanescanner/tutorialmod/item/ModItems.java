@@ -152,6 +152,9 @@ public class ModItems {
     public static final RegistryObject<Item> WATCHING_ENTITY_SPAWN_EGG = ITEMS.register("watching_entity_spawn_egg", () ->
             new ForgeSpawnEggItem(ModEntities.WATCHING_ENTITY, 0x000000, 0x2F2F2F, new Item.Properties()));
 
+    public static final RegistryObject<Item> STEPS_ENTITY_SPAWN_EGG = ITEMS.register("steps_entity_spawn_egg", () ->
+            new ForgeSpawnEggItem(ModEntities.STEPS_ENTITY, 0x000000, 0x2F2F2F, new Item.Properties()));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

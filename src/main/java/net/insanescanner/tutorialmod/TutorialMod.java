@@ -6,6 +6,8 @@ import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
 import net.insanescanner.tutorialmod.effects.ModEffects;
 import net.insanescanner.tutorialmod.enchantments.ModEnchantmentEffects;
 import net.insanescanner.tutorialmod.entity.ModEntities;
+import net.insanescanner.tutorialmod.entity.client.steps_entity.StepsEntityModel;
+import net.insanescanner.tutorialmod.entity.client.steps_entity.StepsEntityRenderer;
 import net.insanescanner.tutorialmod.entity.client.watching_entity.WatchingEntityRenderer;
 import net.insanescanner.tutorialmod.item.ModCreativeModeTabs;
 import net.insanescanner.tutorialmod.item.ModItems;
@@ -158,6 +160,8 @@ public class TutorialMod
             ModItemProperties.addCustomProperties();
 
             EntityRenderers.register(ModEntities.WATCHING_ENTITY.get(), WatchingEntityRenderer::new);
+            EntityRenderers.register(ModEntities.STEPS_ENTITY.get(), StepsEntityRenderer::new);
+
         }
     }
 }

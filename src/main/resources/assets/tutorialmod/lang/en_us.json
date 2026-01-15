@@ -117,5 +117,9 @@
   "block.tutorialmod.mahogany_sapling": "Mahogany Sapling",
 
   "item.tutorialmod.watching_entity_spawn_egg": "Watcher Spawn Egg",
-  "entity.tutorialmod.watching_entity": "§kWatcher§r"
+  "entity.tutorialmod.watching_entity": "§kWatcher§r",
+
+
+  "item.tutorialmod.steps_entity_spawn_egg": "Steps Spawn Egg",
+  "entity.tutorialmod.steps_entity": "Steps"
 }
