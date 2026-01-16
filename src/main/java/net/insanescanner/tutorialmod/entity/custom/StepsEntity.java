@@ -25,7 +25,7 @@ public class StepsEntity extends Monster {
     protected void registerGoals() {
         super.registerGoals();
 
-        this.targetSelector.addGoal(0, new StalkPlayerGoal(this, 1.0f, 0f));
+        this.targetSelector.addGoal(0, new StalkPlayerGoal(this, .7f, 0f));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
 
     }
@@ -33,7 +33,7 @@ public class StepsEntity extends Monster {
     public static AttributeSupplier.Builder createAttributes(){
         return Monster.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 50)
-                .add(Attributes.MOVEMENT_SPEED, 1.0f)
+                .add(Attributes.MOVEMENT_SPEED, 0.7f)
                 .add(Attributes.FOLLOW_RANGE, 150D);
     }
 

@@ -17,7 +17,7 @@ import net.minecraft.util.Mth;
 public class StepsEntityModel<T extends StepsEntity> extends HierarchicalModel<T> {
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "steps_entity"), "main");
     private final ModelPart whole;
-   // private final ModelPart left_leg;
+    //private final ModelPart left_leg;
     //private final ModelPart right_leg;
 
     public StepsEntityModel(ModelPart root) {
@@ -34,7 +34,7 @@ public class StepsEntityModel<T extends StepsEntity> extends HierarchicalModel<T
 
         //PartDefinition left_leg = whole.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(0, 16).mirror().addBox(-1.9F, 11.0F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offset(1.9F, -12.0F, 0.0F));
 
-       // PartDefinition right_leg = whole.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(0, 16).addBox(-2.1F, 11.0F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.9F, -12.0F, 0.0F));
+        //PartDefinition right_leg = whole.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(0, 16).addBox(-2.1F, 11.0F, -2.0F, 4.0F, 1.0F, 4.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.9F, -12.0F, 0.0F));
 
         return LayerDefinition.create(meshdefinition, 64, 64);
     }

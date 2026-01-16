@@ -1,7 +1,13 @@
 package net.insanescanner.tutorialmod.entity.custom;
 
+import net.insanescanner.tutorialmod.entity.WatchingEntityVariant;
+import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.DifficultyInstance;
@@ -21,9 +27,13 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.event.level.NoteBlockEvent;
 import org.jetbrains.annotations.Nullable;
 
 public class WatchingEntity extends Monster {
+    private static final EntityDataAccessor<Integer> VARIANT =
+            SynchedEntityData.defineId(WatchingEntity.class, EntityDataSerializers.INT);
+
     public static final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimout = 0;
     private int messageTimeout = 0;
@@ -35,19 +45,50 @@ public class WatchingEntity extends Monster {
 
     @Override
     protected void registerGoals() {
-
-        this.goalSelector.addGoal(0, new LookAtPlayerGoal(this, Player.class, 600F));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
 
+        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 0.9f, true){
 
-        this.targetSelector.addGoal(2, new StalkPlayerGoal(this, 0.35f, 1f));
+
+
+            @Override
+            public boolean canUse() {
+
+                return WatchingEntity.this.getVariant() == WatchingEntityVariant.ATTACK
+                        && super.canUse();
+
+            }
+        });
+
+        /*this.goalSelector.addGoal(2, new MoveTowardsTargetGoal(this, 0.35f, 60f)
+        {
+            @Override
+            public boolean canUse() {
+                return WatchingEntity.this.getVariant() == WatchingEntityVariant.ATTACK && super.canUse() && WatchingEntity.this.getTarget() instanceof Player;
+            }
+        });*/
+
+        this.targetSelector.addGoal(3, new StalkPlayerGoal(this, 0.9f, 15f){
+
+            @Override
+            public boolean canUse() {
+                return WatchingEntity.this.getVariant() == WatchingEntityVariant.STALK && super.canUse();
+            }
+        });
+
+
+        this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 600F));
+
+
     }
 
     public static AttributeSupplier.Builder createAttributes(){
         return Monster.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 50)
-                .add(Attributes.MOVEMENT_SPEED, .35f)
-                .add(Attributes.FOLLOW_RANGE, 150D);
+                .add(Attributes.MOVEMENT_SPEED, .9f)
+                .add(Attributes.FOLLOW_RANGE, 150D)
+                .add(Attributes.ATTACK_DAMAGE, 2)
+                .add(Attributes.ENTITY_INTERACTION_RANGE, 3.2f);
     }
 
     @Override
@@ -66,8 +107,8 @@ public class WatchingEntity extends Monster {
 
 
         if (closestPlayer != null) {
-
-            this.remove(RemovalReason.DISCARDED);
+            this.setVariant(WatchingEntityVariant.byId(1));
+            //this.remove(RemovalReason.DISCARDED);
             closestPlayer.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 1));
         }
 
@@ -101,12 +142,6 @@ public class WatchingEntity extends Monster {
     }
 
     @Override
-    public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pSpawnType, @Nullable SpawnGroupData pSpawnGroupData) {
-
-        return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, pSpawnGroupData);
-    }
-
-    @Override
     protected void playStepSound(BlockPos pPos, BlockState pState) {
         super.playStepSound(pPos, pState);
 
@@ -119,5 +154,46 @@ public class WatchingEntity extends Monster {
     @Override
     public boolean canBeCollidedWith() {
         return false;
+    }
+
+    // Variant
+
+
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder pBuilder) {
+        super.defineSynchedData(pBuilder);
+        pBuilder.define(VARIANT, 0);
+    }
+
+    private int getTypeVariant() {
+        return this.entityData.get(VARIANT);
+    }
+
+    public WatchingEntityVariant getVariant() {
+        return WatchingEntityVariant.byId(this.getTypeVariant() & 255);
+    }
+
+    private void setVariant(WatchingEntityVariant variant) {
+        this.entityData.set(VARIANT, variant.getId() & 255);
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag pCompound) {
+        super.addAdditionalSaveData(pCompound);
+
+        pCompound.putInt("Variant", this.getTypeVariant());
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag pCompound) {
+        super.readAdditionalSaveData(pCompound);
+        this.entityData.set(VARIANT, pCompound.getInt("Variant"));
+    }
+
+    @Override
+    public @Nullable SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pSpawnType, @Nullable SpawnGroupData pSpawnGroupData) {
+        this.setVariant(WatchingEntityVariant.byId(0));
+
+        return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, pSpawnGroupData);
     }
 }
