@@ -1,6 +1,7 @@
 package net.insanescanner.tutorialmod.worldgen;
 
 import net.insanescanner.tutorialmod.TutorialMod;
+import net.insanescanner.tutorialmod.entity.ModEntities;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -8,10 +9,13 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.List;
 
 public class ModBiomeModifiers {
     //where will this be placed
@@ -26,6 +30,10 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_COMMON_BLUEBERRY_BUSH = registerKey("add_common_blueberry_bush");
     public static final ResourceKey<BiomeModifier> ADD_UNCOMMON_BLUEBERRY_BUSH = registerKey("add_uncommon_blueberry_bush");
     public static final ResourceKey<BiomeModifier> ADD_RARE_BLUEBERRY_BUSH = registerKey("add_rare_blueberry_bush");
+
+    public static final ResourceKey<BiomeModifier> SPAWN_WATCHING_ENTITY = registerKey("spawn_watching_entity");
+    public static final ResourceKey<BiomeModifier> SPAWN_STEPS_ENTITY = registerKey("spawn_steps_entity");
+
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
@@ -81,6 +89,14 @@ public class ModBiomeModifiers {
         context.register(ADD_RARE_BLUEBERRY_BUSH, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.MEADOW)), HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.RARE_BLUEBERRY_BUSH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
+        context.register(SPAWN_WATCHING_ENTITY, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD), List.of(new MobSpawnSettings.SpawnerData(ModEntities.WATCHING_ENTITY.get(), 5, 1, 1))
+        ));
+
+        context.register(SPAWN_STEPS_ENTITY, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD), List.of(new MobSpawnSettings.SpawnerData(ModEntities.STEPS_ENTITY.get(), 15, 1, 1))
         ));
 
     }

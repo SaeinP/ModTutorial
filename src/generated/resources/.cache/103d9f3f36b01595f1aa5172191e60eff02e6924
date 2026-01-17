@@ -1,4 +1,4 @@
-// 1.21	2026-01-12T01:38:05.2370727	Registries
+// 1.21	2026-01-17T05:09:39.201356	Registries
 f8fc89db04b1bb78edcee8546fdcb549ad3a97f2 data/tutorialmod/enchantment/lightning_striker.json
 457c2caa79f1d8ca25c60d6a5f26439e858f4eb4 data/tutorialmod/forge/biome_modifier/add_common_blueberry_bush.json
 21ed363719de45bdf5ab7cd4cd38b5d61adfe289 data/tutorialmod/forge/biome_modifier/add_end_opal_ore.json
@@ -8,6 +8,8 @@ d775b8e8836bdc68588f3eb0a90f96b484c121dd data/tutorialmod/forge/biome_modifier/a
 6f917437ce23afd85baa8b0f497044b8ba7773a9 data/tutorialmod/forge/biome_modifier/add_rare_blueberry_bush.json
 708adb7c853511ee828c3c7ff067fd8d5a0c04b1 data/tutorialmod/forge/biome_modifier/add_sapphire_ore.json
 ff5d0925265a1aca210603d0d8173d84a3f35935 data/tutorialmod/forge/biome_modifier/add_uncommon_blueberry_bush.json
+7195cfc201b2e7a115b96ec626a6ba88b65410b4 data/tutorialmod/forge/biome_modifier/spawn_steps_entity.json
+60b76ad830d56d6afce003edefb33a16b8143e2b data/tutorialmod/forge/biome_modifier/spawn_watching_entity.json
 7c03ebef98d2afd3d7f9d0eb68fc13a6d561808a data/tutorialmod/trim_material/memoite.json
 28f13efc40ac9f384741d941213e08eeabaa604d data/tutorialmod/trim_pattern/insanescanner.json
 9a5b4eed3d4fb75520f664b181ec3bc171e6c05e data/tutorialmod/worldgen/configured_feature/blueberry_bush.json

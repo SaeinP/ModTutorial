@@ -64,6 +64,7 @@ public class WatchingEntityModel<T extends WatchingEntity> extends HierarchicalM
 
         this.animateWalk(WatchingEntityAnimations.WATCHING_ENTITY_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
         this.animate(entity.idleAnimationState, WatchingEntityAnimations.WATCHING_ENTITY_IDLE, ageInTicks, 1f);
+
     }
 
     @Override
