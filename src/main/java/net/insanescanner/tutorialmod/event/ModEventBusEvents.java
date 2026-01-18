@@ -2,6 +2,7 @@ package net.insanescanner.tutorialmod.event;
 
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.entity.ModEntities;
+import net.insanescanner.tutorialmod.entity.client.memoite_sword.MemoiteSwordProjectileModel;
 import net.insanescanner.tutorialmod.entity.client.steps_entity.StepsEntityModel;
 import net.insanescanner.tutorialmod.entity.client.watching_entity.WatchingEntityModel;
 import net.insanescanner.tutorialmod.entity.custom.StepsEntity;
@@ -22,6 +23,7 @@ public class ModEventBusEvents {
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event){
         event.registerLayerDefinition(WatchingEntityModel.LAYER_LOCATION, WatchingEntityModel::createBodyLayer);
         event.registerLayerDefinition(StepsEntityModel.LAYER_LOCATION, StepsEntityModel::createBodyLayer);
+        event.registerLayerDefinition(MemoiteSwordProjectileModel.LAYER_LOCATION, MemoiteSwordProjectileModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -37,6 +39,10 @@ public class ModEventBusEvents {
 
         event.register(ModEntities.STEPS_ENTITY.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 ((pEntityType, pServerLevel, pSpawnType, pPos, pRandom) -> pServerLevel.getBlockState(pPos.below()).isSolid()), SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+
     }
+
+
 
 }

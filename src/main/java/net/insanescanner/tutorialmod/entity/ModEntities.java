@@ -2,6 +2,7 @@ package net.insanescanner.tutorialmod.entity;
 
 import net.insanescanner.tutorialmod.TutorialMod;
 import net.insanescanner.tutorialmod.entity.client.steps_entity.StepsEntityRenderer;
+import net.insanescanner.tutorialmod.entity.custom.MemoiteSwordProjectileEntity;
 import net.insanescanner.tutorialmod.entity.custom.StepsEntity;
 import net.insanescanner.tutorialmod.entity.custom.WatchingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -22,6 +23,10 @@ public class ModEntities {
     public static final RegistryObject<EntityType<StepsEntity>> STEPS_ENTITY =
             ENTITY_TYPES.register("steps_entity", () -> EntityType.Builder.of(StepsEntity::new, MobCategory.MONSTER)
                     .sized(0.4f,0.3f).build("steps_entity"));
+
+    public static final RegistryObject<EntityType<MemoiteSwordProjectileEntity>> MEMOITE_SWORD_PROJECTILE_ENTITY =
+            ENTITY_TYPES.register("memoite_sword_projectile_entity", () -> EntityType.Builder.<MemoiteSwordProjectileEntity>of((entityType, level) -> new MemoiteSwordProjectileEntity(entityType, level), MobCategory.MISC)
+                    .sized(0.5f,0.9f).build("memoite_sword_projectile_entity"));
 
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);

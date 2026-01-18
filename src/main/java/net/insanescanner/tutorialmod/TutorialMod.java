@@ -6,6 +6,7 @@ import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
 import net.insanescanner.tutorialmod.effects.ModEffects;
 import net.insanescanner.tutorialmod.enchantments.ModEnchantmentEffects;
 import net.insanescanner.tutorialmod.entity.ModEntities;
+import net.insanescanner.tutorialmod.entity.client.memoite_sword.MemoiteSwordProjectileEntityRenderer;
 import net.insanescanner.tutorialmod.entity.client.steps_entity.StepsEntityModel;
 import net.insanescanner.tutorialmod.entity.client.steps_entity.StepsEntityRenderer;
 import net.insanescanner.tutorialmod.entity.client.watching_entity.WatchingEntityRenderer;
@@ -161,7 +162,7 @@ public class TutorialMod
 
             EntityRenderers.register(ModEntities.WATCHING_ENTITY.get(), WatchingEntityRenderer::new);
             EntityRenderers.register(ModEntities.STEPS_ENTITY.get(), StepsEntityRenderer::new);
-
+            EntityRenderers.register(ModEntities.MEMOITE_SWORD_PROJECTILE_ENTITY.get(), MemoiteSwordProjectileEntityRenderer::new);
         }
     }
 }

@@ -1,18 +1,21 @@
 package net.insanescanner.tutorialmod.item.custom.memoite_tools;
 
-import net.insanescanner.tutorialmod.entity.custom.MemoiteAxeProjectileEntity;
+import net.insanescanner.tutorialmod.entity.custom.MemoiteSwordProjectileEntity;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.event.level.BlockEvent;
 
 import java.util.List;
 
@@ -28,17 +31,28 @@ public class MemoiteSwordItem extends SwordItem {
 
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
     }
-
+/*
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pUsedHand);
 
+
+
         pLevel.playSound(null, pPlayer.getX(), pPlayer.getY(), pPlayer.getZ(),
                 SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F));
         if (!pLevel.isClientSide) {
-            MemoiteAxeProjectileEntity MemoiteAxeProjectile = new MemoiteAxeProjectileEntity(pPlayer, pLevel, itemstack.getDamageValue());
-            MemoiteAxeProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0F);
-            pLevel.addFreshEntity(MemoiteAxeProjectile);
+            if(pPlayer.getOffhandItem().is(Items.SHIELD)){
+                return new InteractionResultHolder<>(InteractionResult.FAIL, itemstack);
+            }
+            System.out.println("CREATING ENTITY");
+            itemstack.hurtAndBreak(10, (ServerLevel) pLevel, (ServerPlayer) pPlayer, item -> {
+            });
+            MemoiteSwordProjectileEntity MemoiteSwordProjectile = new MemoiteSwordProjectileEntity((LivingEntity) pPlayer, pLevel, itemstack.copy());
+            System.out.println("CREATING ENTITY2");
+            MemoiteSwordProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0F);
+
+            System.out.println("CREATING ENTITY3");
+            pLevel.addFreshEntity(MemoiteSwordProjectile);
         }
 
         pPlayer.awardStat(Stats.ITEM_USED.get(this));
@@ -47,5 +61,11 @@ public class MemoiteSwordItem extends SwordItem {
         }
 
         return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
+    }
+*/
+
+    private static boolean playerHasShieldUseIntent(UseOnContext pContext) {
+        Player player = pContext.getPlayer();
+        return pContext.getHand().equals(InteractionHand.MAIN_HAND) && player.getOffhandItem().is(Items.SHIELD) && !player.isSecondaryUseActive();
     }
 }
