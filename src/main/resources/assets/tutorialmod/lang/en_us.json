@@ -20,6 +20,9 @@
   "item.tutorialmod.insanescanner_armor_trim_smithing_template": "Smithing Template",
 
   "item.tutorialmod.memoite_sword": "Memoite Sword",
+  "tooltip.tutorialmod.memoite_sword.non_shifted": "HOLD §1§nSHIFT§r TO LEARN MORE",
+  "tooltip.tutorialmod.memoite_sword.shifted": "ON USE WILL SHOOT A MEMORY OF THE SWORD IN EXCHANGE FOR LIFE",
+
   "item.tutorialmod.memoite_axe": "Memoite Axe",
   "item.tutorialmod.memoite_hoe": "Memoite Hoe",
   "item.tutorialmod.memoite_pickaxe": "Memoite Pickaxe",
