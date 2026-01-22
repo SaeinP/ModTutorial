@@ -221,6 +221,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAHOGANY_SAPLING = registerBlock("mahogany_sapling", () ->
             new ModSaplingBlock(ModTreeGrower.MAHOGANY, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING), () -> Blocks.DIRT));
 
+    public static final RegistryObject<Block> TEXTURELESS_CHAIR = registerBlock("textureless_chair", () -> new TexturelessChairBlock(BlockBehaviour.Properties.of().noOcclusion()));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

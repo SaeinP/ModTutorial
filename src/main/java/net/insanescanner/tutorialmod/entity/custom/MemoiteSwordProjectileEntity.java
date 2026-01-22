@@ -1,6 +1,7 @@
 package net.insanescanner.tutorialmod.entity.custom;
 import net.insanescanner.tutorialmod.entity.ModEntities;
 import net.insanescanner.tutorialmod.item.ModItems;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
 import net.minecraft.nbt.CompoundTag;
@@ -42,7 +43,7 @@ public class MemoiteSwordProjectileEntity extends AbstractArrow {
 
     @Override
     protected ItemStack getDefaultPickupItem() {
-        // This is now the source of truth
+
         return null;
     }
 
@@ -73,11 +74,15 @@ public class MemoiteSwordProjectileEntity extends AbstractArrow {
 
     @Override
     protected void onHitBlock(BlockHitResult result) {
-
+        BlockPos hitBlock = result.getBlockPos();
 
         if(result.getDirection() == Direction.SOUTH) {
             groundedOffset = new Vec2(215f,180f);
         }
+        if(!this.level().isClientSide()){
+            level().destroyBlock(hitBlock, true);
+        }
+
         /*if(result.getDirection() == Direction.NORTH) {
             groundedOffset = new Vec2(215f, 0f);
         }

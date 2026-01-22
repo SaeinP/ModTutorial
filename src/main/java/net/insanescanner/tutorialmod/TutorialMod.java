@@ -117,6 +117,8 @@ public class TutorialMod
             event.accept(ModBlocks.STRIPPED_MAHOGANY_WOOD);
             event.accept(ModBlocks.MAHOGANY_PLANKS);
 
+            event.accept(ModBlocks.TEXTURELESS_CHAIR);
+
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){

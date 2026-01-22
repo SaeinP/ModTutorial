@@ -1,0 +1,20 @@
+{
+  "parent": "tutorialmod:block/textureless_chair",
+  "display": {
+    "gui": {
+      "thirdperson_righthand": {
+        "rotation": [ 10, -45, 170 ],
+        "translation": [ 0, 1, -2 ],
+        "scale": [ 0.5, 0.5, 0.5 ]
+      },
+      "firstperson_righthand": {
+        "rotation": [ 0, 45, 0 ],
+        "translation": [ 0, 2, 0 ],
+        "scale": [ 0.5, 0.5, 0.5 ]
+      },
+      "rotation": [ 30, 225, 0 ],
+      "translation": [ 0, -2, 0 ],
+      "scale": [ 0.5, 0.5, 0.5 ]
+    }
+  }
+}

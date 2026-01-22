@@ -64,6 +64,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_MAHOGANY_LOG.get());
                         output.accept(ModBlocks.STRIPPED_MAHOGANY_WOOD.get());
                         output.accept(ModBlocks.MAHOGANY_PLANKS.get());
+
+                        output.accept(ModBlocks.TEXTURELESS_CHAIR.get());
                     }).build());
 
 

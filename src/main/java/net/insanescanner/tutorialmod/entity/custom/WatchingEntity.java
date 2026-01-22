@@ -8,9 +8,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
@@ -42,6 +45,9 @@ public class WatchingEntity extends Monster {
     private int messageTimeout = 0;
     private Player closePlyr = null;
     private int lifetime = 1000;
+
+    private final ServerBossEvent BOSS_EVENT = new ServerBossEvent(Component.literal("Some dude"),
+            BossEvent.BossBarColor.WHITE, BossEvent.BossBarOverlay.NOTCHED_10);
 
 
 
@@ -235,4 +241,28 @@ public class WatchingEntity extends Monster {
             this.playSound(SoundEvents.ENDERMAN_STARE, 0.2F, 0.9F + this.random.nextFloat() * 0.2F);
         }
     }
+
+    // Boss Event Stuff
+
+
+    @Override
+    public void startSeenByPlayer(ServerPlayer pServerPlayer) {
+
+        super.startSeenByPlayer(pServerPlayer);
+        //this.BOSS_EVENT.addPlayer(pServerPlayer);
+    }
+
+    @Override
+    public void stopSeenByPlayer(ServerPlayer pServerPlayer) {
+        super.stopSeenByPlayer(pServerPlayer);
+        //this.BOSS_EVENT.removePlayer(pServerPlayer);
+    }
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        //this.BOSS_EVENT.setProgress(this.getHealth()/this.getMaxHealth());
+    }
+
+
 }

@@ -57,12 +57,8 @@ public class MemoiteSwordItem extends SwordItem { ;
             if(pPlayer.getOffhandItem().is(Items.SHIELD)){
                 return new InteractionResultHolder<>(InteractionResult.FAIL, itemstack);
             }
-            System.out.println("CREATING ENTITY");
             MemoiteSwordProjectileEntity MemoiteSwordProjectile = new MemoiteSwordProjectileEntity((LivingEntity) pPlayer, pLevel);
-            System.out.println("CREATING ENTITY2");
             MemoiteSwordProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0F);
-
-            System.out.println("CREATING ENTITY3");
             pLevel.addFreshEntity(MemoiteSwordProjectile);
         }
 
