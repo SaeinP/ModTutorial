@@ -126,5 +126,7 @@
   "item.tutorialmod.steps_entity_spawn_egg": "Steps Spawn Egg",
   "entity.tutorialmod.steps_entity": "Steps",
 
-  "block.tutorialmod.textureless_chair": "Textureless Chair"
+  "block.tutorialmod.textureless_chair": "Textureless Chair",
+
+  "entity.minecraft.villager.tutorialmod.esteemed_villager": "Esteemed Villager"
 }

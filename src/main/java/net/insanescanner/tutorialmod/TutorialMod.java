@@ -9,12 +9,14 @@ import net.insanescanner.tutorialmod.entity.ModEntities;
 import net.insanescanner.tutorialmod.entity.client.memoite_sword.MemoiteSwordProjectileEntityRenderer;
 import net.insanescanner.tutorialmod.entity.client.steps_entity.StepsEntityModel;
 import net.insanescanner.tutorialmod.entity.client.steps_entity.StepsEntityRenderer;
+import net.insanescanner.tutorialmod.entity.client.textureless_chair.TexturelessChairRenderer;
 import net.insanescanner.tutorialmod.entity.client.watching_entity.WatchingEntityRenderer;
 import net.insanescanner.tutorialmod.item.ModCreativeModeTabs;
 import net.insanescanner.tutorialmod.item.ModItems;
 import net.insanescanner.tutorialmod.potion.ModPotions;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.insanescanner.tutorialmod.util.ModItemProperties;
+import net.insanescanner.tutorialmod.villagers.ModVillagers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -62,6 +64,7 @@ public class TutorialMod
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
+        ModVillagers.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         ModEntities.register(modEventBus);
@@ -161,7 +164,7 @@ public class TutorialMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             ModItemProperties.addCustomProperties();
-
+            EntityRenderers.register(ModEntities.TEXTURELESS_CHAIR_ENTITY.get(), TexturelessChairRenderer::new);
             EntityRenderers.register(ModEntities.WATCHING_ENTITY.get(), WatchingEntityRenderer::new);
             EntityRenderers.register(ModEntities.STEPS_ENTITY.get(), StepsEntityRenderer::new);
             EntityRenderers.register(ModEntities.MEMOITE_SWORD_PROJECTILE_ENTITY.get(), MemoiteSwordProjectileEntityRenderer::new);
