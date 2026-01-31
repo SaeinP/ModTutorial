@@ -1,3 +1,55 @@
+MyModName
+
+Version: 1.0.0
+Minecraft Version: 1.21.1
+
+A Minecraft mod adding new ores, unique variants, and custom entities to enhance your world exploration and gameplay experience.
+
+Features
+Custom Ores
+
+Four new ores with multiple variants:
+
+Memoite Ore and Sapphire Deepslate variants along with regular stone variants
+
+Ruby Ore found only in the Nether and Opal ore only found in the End.
+
+Ores spawn naturally in the world, making exploration rewarding.
+
+Each ore has unique characteristics and can be used in crafting, building, or smelting.
+
+Custom Entities
+
+Two custom entities with unique behaviors (describe briefly what they do if you want).
+Watcher one that watches you if you get to close something might happen :)
+
+Steps Entity makes sounds and chases you.
+
+Adds new interactions and challenges in your world.
+
+Additional Features
+
+Make sure you have Minecraft Forge installed.
+
+Launch Minecraft with the Forge 1.21.1.
+
+Usage
+
+Explore the world to find and mine new ores.
+
+Encounter custom entities in various biomes.
+
+Beware of what may lurk in the dark.
+
+Use the ores in your crafting recipes and builds.
+
+Planned Updates
+
+Additional ores and variants
+
+More custom entities with unique abilities
+
+Advanced crafting mechanics
 
 Source installation information for modders
 -------------------------------------------
