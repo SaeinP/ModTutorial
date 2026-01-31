@@ -125,7 +125,7 @@ public class TutorialMod
         }
 
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
-            event.accept(ModItems.MAGIC_CHISEL.get());
+            //event.accept(ModItems.MAGIC_CHISEL.get());
             event.accept(ModItems.OPAL_RING.get());
             event.accept(ModItems.SAPPHIRE_RING.get());
             event.accept(ModItems.EMERALD_RING.get());

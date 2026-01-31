@@ -62,8 +62,8 @@ public class ModItems {
     public static final RegistryObject<Item> CUT_EMERALD = ITEMS.register("cut_emerald",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> MAGIC_CHISEL = ITEMS.register("magic_chisel",
-            () -> new MagicChiselItem(new Item.Properties().durability(32).stacksTo(1)));
+    /*public static final RegistryObject<Item> MAGIC_CHISEL = ITEMS.register("magic_chisel",
+            () -> new MagicChiselItem(new Item.Properties().durability(32).stacksTo(1)));*/
 
     public static final RegistryObject<Item> OPAL_RING = ITEMS.register("opal_ring",
             () -> new OpalRingItem(new Item.Properties().stacksTo(1)

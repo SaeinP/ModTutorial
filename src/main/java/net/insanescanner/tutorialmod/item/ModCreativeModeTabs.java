@@ -31,7 +31,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RUBY.get());
                         output.accept(ModItems.SAPPHIRE_APPLE.get());
                         output.accept(ModItems.ENCHANTED_SAPPHIRE_APPLE.get());
-                        output.accept(ModItems.MAGIC_CHISEL.get());
+                        //output.accept(ModItems.MAGIC_CHISEL.get());
                         output.accept(ModBlocks.MAGIC_BLOCK.get());
                         output.accept(ModItems.OPAL_RING.get());
                         output.accept(ModItems.SAPPHIRE_RING.get());
@@ -117,11 +117,11 @@ public class ModCreativeModeTabs {
 
     public static final RegistryObject<CreativeModeTab> TUTORIAL_ACTIONABLE_TAB =
             CREATIVE_MODE_TABS.register("tutorial_actionables_tab",
-                    () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MAGIC_CHISEL.get()))
+                    () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MEMOITE_BOW.get()))
                             .withTabsBefore(TUTORIAL_BLOCKS_TAB.getId())
                             .title(Component.translatable("creativetab.tutorialmod.tutorial_mod_actionables"))
                             .displayItems((itemDisplayParameters, output)-> {
-                                output.accept(ModItems.MAGIC_CHISEL.get());
+                                //output.accept(ModItems.MAGIC_CHISEL.get());
                                 output.accept(ModItems.OPAL_RING.get());
                                 output.accept(ModItems.SAPPHIRE_RING.get());
                                 output.accept(ModItems.EMERALD_RING.get());

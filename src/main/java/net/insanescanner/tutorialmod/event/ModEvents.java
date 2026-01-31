@@ -1,25 +1,31 @@
 package net.insanescanner.tutorialmod.event;
 
 import net.insanescanner.tutorialmod.TutorialMod;
+import net.insanescanner.tutorialmod.item.ModItems;
 import net.insanescanner.tutorialmod.item.custom.ModArmorMaterials;
 import net.insanescanner.tutorialmod.item.custom.memoite_tools.MemoiteHammerItem;
 import net.insanescanner.tutorialmod.item.custom.memoite_tools.MemoiteOreMinerItem;
 import net.insanescanner.tutorialmod.item.custom.memoite_tools.OreMinerItem;
 import net.insanescanner.tutorialmod.potion.ModPotions;
+import net.insanescanner.tutorialmod.villagers.ModVillagers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionBrewing;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.event.brewing.BrewingRecipeRegisterEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -113,5 +119,30 @@ public class ModEvents {
         builder.addMix(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION.getHolder().get());
 
 
+    }
+
+
+    @SubscribeEvent
+    public static void addCustomTrades(VillagerTradesEvent event){
+        if(event.getType() == VillagerProfession.FARMER){
+            var trades = event.getTrades();
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemCost(Items.EMERALD, 5),
+                    new ItemStack(ModItems.SPINACH.get(), 9), 6, 4, 0.85f) );
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemCost(Items.EMERALD, 3),
+                    new ItemStack(ModItems.SPINACH_SEED.get(), 2), 5, 4, 0.85f) );
+
+        }
+
+        if(event.getType() == ModVillagers.ESTEEMED_VILLAGER.get()){
+            var trades = event.getTrades();
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(new ItemCost(ModItems.SAPPHIRE.get(), 1),
+                    new ItemStack(ModItems.WRATH_REMNANT.get(), 1), 6, 4, 0.85f) );
+
+
+
+        }
     }
 }
