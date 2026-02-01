@@ -223,6 +223,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> TEXTURELESS_CHAIR = registerBlock("textureless_chair", () -> new TexturelessChairBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
+    public static final RegistryObject<Block> PEDESTAL = registerBlock("pedestal", () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

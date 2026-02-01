@@ -2,7 +2,9 @@ package net.insanescanner.tutorialmod.item.custom.memoite_tools;
 
 import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
 import net.insanescanner.tutorialmod.entity.custom.MemoiteSwordProjectileEntity;
+import net.insanescanner.tutorialmod.particles.ModParticles;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -57,6 +59,10 @@ public class MemoiteSwordItem extends SwordItem { ;
             if(pPlayer.getOffhandItem().is(Items.SHIELD)){
                 return new InteractionResultHolder<>(InteractionResult.FAIL, itemstack);
             }
+            ((ServerLevel) pLevel).sendParticles(ModParticles.PURPLE_FACE.get(),
+                    pPlayer.getX(), pPlayer.getY() + 1.5,
+                    pPlayer.getZ(), 5, 0, 0, 0, 3);
+
             MemoiteSwordProjectileEntity MemoiteSwordProjectile = new MemoiteSwordProjectileEntity((LivingEntity) pPlayer, pLevel);
             MemoiteSwordProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 0F);
             pLevel.addFreshEntity(MemoiteSwordProjectile);

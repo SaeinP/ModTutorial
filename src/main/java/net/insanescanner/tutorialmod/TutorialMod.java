@@ -2,6 +2,7 @@ package net.insanescanner.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.insanescanner.tutorialmod.block.ModBlocks;
+import net.insanescanner.tutorialmod.block.entity.ModBlockEntities;
 import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
 import net.insanescanner.tutorialmod.effects.ModEffects;
 import net.insanescanner.tutorialmod.enchantments.ModEnchantmentEffects;
@@ -13,6 +14,8 @@ import net.insanescanner.tutorialmod.entity.client.textureless_chair.Textureless
 import net.insanescanner.tutorialmod.entity.client.watching_entity.WatchingEntityRenderer;
 import net.insanescanner.tutorialmod.item.ModCreativeModeTabs;
 import net.insanescanner.tutorialmod.item.ModItems;
+import net.insanescanner.tutorialmod.particles.ModParticles;
+import net.insanescanner.tutorialmod.particles.PurpleFaceParticles;
 import net.insanescanner.tutorialmod.potion.ModPotions;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.insanescanner.tutorialmod.util.ModItemProperties;
@@ -21,6 +24,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -65,9 +69,11 @@ public class TutorialMod
         ModPotions.register(modEventBus);
         ModEnchantmentEffects.register(modEventBus);
         ModVillagers.register(modEventBus);
+        ModParticles.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
         ModEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -168,6 +174,10 @@ public class TutorialMod
             EntityRenderers.register(ModEntities.WATCHING_ENTITY.get(), WatchingEntityRenderer::new);
             EntityRenderers.register(ModEntities.STEPS_ENTITY.get(), StepsEntityRenderer::new);
             EntityRenderers.register(ModEntities.MEMOITE_SWORD_PROJECTILE_ENTITY.get(), MemoiteSwordProjectileEntityRenderer::new);
+        }
+        @SubscribeEvent
+        public static void registerParticleProvider(RegisterParticleProvidersEvent event){
+            event.registerSpriteSet(ModParticles.PURPLE_FACE.get(), PurpleFaceParticles.Provider::new);
         }
     }
 }

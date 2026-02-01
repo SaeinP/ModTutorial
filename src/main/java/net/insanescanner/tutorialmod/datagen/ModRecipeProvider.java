@@ -22,14 +22,14 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MAGIC_CHISEL.get())
+        /*ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MAGIC_CHISEL.get())
                 .pattern("A")
                 .pattern("B")
                 .define('A', ModItems.MEMOITE.get())
                 .define('B', Items.BLAZE_ROD)
                 .unlockedBy(getHasName(ModItems.MEMOITE.get()), has(ModItems.MEMOITE.get()))
                 .unlockedBy(getHasName(Items.BLAZE_ROD), has(Items.BLAZE_ROD))
-                .save(pRecipeOutput);
+                .save(pRecipeOutput);*/
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MEMOITE_HOE.get())
                 .pattern("AA")

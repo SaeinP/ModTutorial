@@ -12,8 +12,8 @@ import net.minecraft.world.item.Items;
 public class ModItemProperties {
 
     public static void addCustomProperties(){
-        ItemProperties.register(ModItems.MAGIC_CHISEL.get(), ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "used"), (itemStack, clientLevel, livingentity, i)
-                -> itemStack.get(ModDataComponentTypes.COORDINATE.get()) != null ? 1f : 0f);
+        /*ItemProperties.register(ModItems.MAGIC_CHISEL.get(), ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "used"), (itemStack, clientLevel, livingentity, i)
+                -> itemStack.get(ModDataComponentTypes.COORDINATE.get()) != null ? 1f : 0f);*/
 
 
         makeCustomBow(ModItems.MEMOITE_BOW.get());
