@@ -3,6 +3,7 @@ package net.insanescanner.tutorialmod;
 import com.mojang.logging.LogUtils;
 import net.insanescanner.tutorialmod.block.ModBlocks;
 import net.insanescanner.tutorialmod.block.entity.ModBlockEntities;
+import net.insanescanner.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.insanescanner.tutorialmod.component.ModDataComponentTypes;
 import net.insanescanner.tutorialmod.effects.ModEffects;
 import net.insanescanner.tutorialmod.enchantments.ModEnchantmentEffects;
@@ -24,6 +25,7 @@ import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -166,6 +168,7 @@ public class TutorialMod
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
@@ -175,9 +178,15 @@ public class TutorialMod
             EntityRenderers.register(ModEntities.STEPS_ENTITY.get(), StepsEntityRenderer::new);
             EntityRenderers.register(ModEntities.MEMOITE_SWORD_PROJECTILE_ENTITY.get(), MemoiteSwordProjectileEntityRenderer::new);
         }
+
         @SubscribeEvent
         public static void registerParticleProvider(RegisterParticleProvidersEvent event){
             event.registerSpriteSet(ModParticles.PURPLE_FACE.get(), PurpleFaceParticles.Provider::new);
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event){
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
     }
 }

@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class PedestalBlockEntity extends BlockEntity {
-
+    private float rotation;
     public final ItemStackHandler inventory = new ItemStackHandler(1){
         @Override
         protected int getStackLimit(int slot, @NotNull ItemStack stack) {
@@ -73,5 +73,11 @@ public class PedestalBlockEntity extends BlockEntity {
         return saveWithoutMetadata(pRegistries);
     }
 
-
+    public float getRenderingRotation(){
+        rotation += 0.5f;
+        if(rotation >= 360){
+            rotation = 0;
+        }
+        return rotation;
+    }
 }
