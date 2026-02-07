@@ -18,9 +18,12 @@ import net.insanescanner.tutorialmod.item.ModItems;
 import net.insanescanner.tutorialmod.particles.ModParticles;
 import net.insanescanner.tutorialmod.particles.PurpleFaceParticles;
 import net.insanescanner.tutorialmod.potion.ModPotions;
+import net.insanescanner.tutorialmod.screen.ModMenuTypes;
+import net.insanescanner.tutorialmod.screen.custom.PedestalScreen;
 import net.insanescanner.tutorialmod.sounds.ModSounds;
 import net.insanescanner.tutorialmod.util.ModItemProperties;
 import net.insanescanner.tutorialmod.villagers.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -76,6 +79,7 @@ public class TutorialMod
         modEventBus.addListener(this::addCreative);
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -177,6 +181,8 @@ public class TutorialMod
             EntityRenderers.register(ModEntities.WATCHING_ENTITY.get(), WatchingEntityRenderer::new);
             EntityRenderers.register(ModEntities.STEPS_ENTITY.get(), StepsEntityRenderer::new);
             EntityRenderers.register(ModEntities.MEMOITE_SWORD_PROJECTILE_ENTITY.get(), MemoiteSwordProjectileEntityRenderer::new);
+
+            MenuScreens.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
         }
 
         @SubscribeEvent
